@@ -1,7 +1,3 @@
-<a href="index.html" class="home-link">
-    <i class="fas fa-home"></i> Início
-</a>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,23 +13,29 @@
     <link rel="stylesheet" href="agendamento.css">
 </head>
 <body>
-<!-- Botão de Agendamento -->
-<button class="btn-agendar" onclick="abrirConfirmacao()">Agendar Serviço</button>
 
-<!-- Modal de Confirmação -->
-<div id="modalConfirmacao" class="modal">
-    <div class="modal-content">
-        <h2>Confirme seu Agendamento</h2>
-        <p><strong>Serviço:</strong> <span id="confirmaServico"></span></p>
-        <p><strong>Data:</strong> <span id="confirmaData"></span></p>
-        <p><strong>Horário:</strong> <span id="confirmaHorario"></span></p>
-        
-        <div class="modal-buttons">
-            <button class="btn-confirmar" onclick="confirmarAgendamento()">Confirmar</button>
-            <button class="btn-cancelar" onclick="fecharModal()">Cancelar</button>
+    <!-- Atalho para a Tela Inicial -->
+    <a href="index.html" class="home-link">
+        <i class="fas fa-home"></i> Início
+    </a>
+
+    <!-- Botão de Agendamento -->
+    <button class="btn-agendar" onclick="abrirConfirmacao()">Agendar Serviço</button>
+
+    <!-- Modal de Confirmação -->
+    <div id="modalConfirmacao" class="modal">
+        <div class="modal-content">
+            <h2>Confirme seu Agendamento</h2>
+            <p><strong>Serviço:</strong> <span id="confirmaServico"></span></p>
+            <p><strong>Data:</strong> <span id="confirmaData"></span></p>
+            <p><strong>Horário:</strong> <span id="confirmaHorario"></span></p>
+
+            <div class="modal-buttons">
+                <button class="btn-confirmar" onclick="confirmarAgendamento()">Confirmar</button>
+                <button class="btn-cancelar" onclick="fecharModal()">Cancelar</button>
+            </div>
         </div>
     </div>
-</div>
 
     <!-- Contêiner de Agendamento -->
     <div class="agendamento-container">
@@ -41,7 +43,7 @@
         <p>Escolha o serviço ideal para sua motocicleta e agende agora mesmo!</p>
 
         <!-- Formulário de Agendamento -->
-        <form action="processa-agendamento.php" method="POST">
+        <form action="processa-agendamento.php" method="POST" id="formAgendamento">
             <!-- Nome do Cliente -->
             <div class="input-group">
                 <i class="fas fa-user"></i>
@@ -57,7 +59,7 @@
             <!-- Seleção de Serviço -->
             <div class="input-group">
                 <i class="fas fa-cogs"></i>
-                <select name="servico" required>
+                <select name="servico" id="servico" required>
                     <option value="">Selecione o Serviço</option>
                     <option value="Troca de Óleo">Troca de Óleo</option>
                     <option value="Revisão Completa">Revisão Completa</option>
@@ -70,11 +72,17 @@
             <!-- Data do Agendamento -->
             <div class="input-group">
                 <i class="fas fa-calendar-alt"></i>
-                <input type="date" name="data" required>
+                <input type="date" name="data" id="data" required>
+            </div>
+
+            <!-- Horário do Agendamento -->
+            <div class="input-group">
+                <i class="fas fa-clock"></i>
+                <input type="time" name="horario" id="horario" required>
             </div>
 
             <!-- Botão de Envio -->
-            <button type="submit" class="btn-agendamento">Agendar Serviço</button>
+            <button type="submit" class="btn-agendar">Agendar Serviço</button>
         </form>
     </div>
 
@@ -85,28 +93,5 @@
 
     <!-- Script de Validação JavaScript (Opcional) -->
     <script src="agendamento.js"></script>
-<script src="agendamento.js"></script>
-
 </body>
 </html>
-<!-- Formulário de Agendamento -->
-<form id="formAgendamento" onsubmit="redirecionarConfirmacao(event)">
-    <label for="servico">Escolha o serviço:</label>
-    <select id="servico" name="servico" required>
-        <option value="">Selecione...</option>
-        <option value="Troca de óleo">Troca de óleo</option>
-        <option value="Revisão geral">Revisão geral</option>
-        <option value="Alinhamento">Alinhamento</option>
-    </select>
-
-    <label for="data">Data:</label>
-    <input type="date" id="data" name="data" required>
-
-    <label for="horario">Horário:</label>
-    <input type="time" id="horario" name="horario" required>
-
-    <button type="submit" class="btn-agendar">Agendar Serviço</button>
-</form>
-
-<!-- Importa o JavaScript -->
-<script src="agendamento.js"></script>
