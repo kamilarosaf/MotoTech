@@ -10,6 +10,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
+    overflow-x: hidden; /* Impede rolagem horizontal */
 }
 
 /* Barra de navegação no topo */
@@ -21,10 +22,12 @@ nav {
     padding: 10px 0;
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilo para os itens de navegação */
 nav ul {
     list-style: none;
     display: flex;
@@ -53,7 +56,6 @@ nav ul li a:hover {
 /* Ajustando o layout do corpo para que a rolagem funcione */
 body {
     padding-top: 60px; /* Espaço para a barra de navegação fixa */
-    overflow-x: hidden; /* Impede rolagem horizontal */
 }
 
 /* Contêiner de Serviços */
@@ -67,7 +69,6 @@ body {
     text-align: center;
     margin-bottom: 50px;
     margin-top: 20px;
-    overflow: hidden;
 }
 
 /* Título */
