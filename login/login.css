@@ -1,0 +1,85 @@
+/* Estilizando a página de login */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #000, #222); /* Fundo escuro */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Caixa de login */
+.login-container {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    width: 350px;
+}
+
+/* Logo em texto */
+.login-container h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.login-container span {
+    color: #ff4500;
+}
+
+/* Campos de entrada */
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #222;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.input-group i {
+    margin-right: 10px;
+    color: #ff4500;
+}
+
+.input-group input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+}
+
+/* Botão de login */
+.btn-login {
+    background: #ff4500;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: #ff5722;
+}
+
+/* Link de "Esqueceu a senha" */
+a {
+    color: #ff4500;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
