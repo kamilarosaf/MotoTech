@@ -104,3 +104,16 @@ a:hover {
         opacity: 1;
     }
 }
+/* Estilo para o link "Voltar para o login" */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ff4500; /* Cor do link */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    color: #ff5722; /* Cor ao passar o mouse */
+}
