@@ -103,3 +103,23 @@ footer {
     bottom: 0;
     border-top: 1px solid #555;
 }
+/* Fonte personalizada para o nome "MOTO TECH" */
+.logo-text {
+    font-family: 'Racing Sans One', cursive;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.logo-text h1 {
+    font-size: 70px;
+    margin: 0;
+    color: #ff4500;
+}
+
+.logo-text h2 {
+    font-size: 120px;
+    margin: -10px 0 20px;
+    color: #ff5722;
+    letter-spacing: 5px;
+}
+
