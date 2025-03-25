@@ -11,6 +11,19 @@ body {
     height: 100vh;
     color: white;
     text-align: center;
+    position: relative; /* Necessário para posicionar o pseudo-elemento */
+}
+
+/* Camada de sobreposição */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Preto transparente */
+    z-index: -1; /* Mantém a camada atrás do conteúdo */
 }
 
 /* Contêiner central */
@@ -63,35 +76,10 @@ footer {
     text-align: center;
     border-top: 1px solid #555;
 }
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    background: red; /* Testa se o background está sendo aplicado */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-    color: white;
-    text-align: center;
-}
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Preto transparente */
-    z-index: -1; /* Mantém a camada atrás do conteúdo */
-}
+
+/* Responsividade para telas menores */
 @media (max-width: 600px) {
     body {
         background-position: center center;
     }
 }
-body {
-    text-align: center; /* Centraliza todo o texto dentro do body */
-}
-
