@@ -97,3 +97,25 @@ footer {
     bottom: 0;
     font-size: 14px;
 }
+/* Correção do fundo da caixa de seleção */
+.input-group select {
+    background-color: #333; /* Fundo escuro para manter a consistência */
+    color: #fff; /* Texto branco para visibilidade */
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    appearance: none; /* Remove estilos padrões do navegador */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Estilo ao expandir */
+.input-group select:focus {
+    background-color: #444; /* Fundo um pouco mais claro no foco */
+}
+
+/* Corrige as opções (option) que estavam transparentes */
+.input-group select option {
+    background-color: #222; /* Mantém o fundo escuro */
+    color: #fff; /* Texto branco para melhor legibilidade */
+}
