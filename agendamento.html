@@ -13,6 +13,23 @@
     <link rel="stylesheet" href="agendamento.css">
 </head>
 <body>
+<!-- Botão de Agendamento -->
+<button class="btn-agendar" onclick="abrirConfirmacao()">Agendar Serviço</button>
+
+<!-- Modal de Confirmação -->
+<div id="modalConfirmacao" class="modal">
+    <div class="modal-content">
+        <h2>Confirme seu Agendamento</h2>
+        <p><strong>Serviço:</strong> <span id="confirmaServico"></span></p>
+        <p><strong>Data:</strong> <span id="confirmaData"></span></p>
+        <p><strong>Horário:</strong> <span id="confirmaHorario"></span></p>
+        
+        <div class="modal-buttons">
+            <button class="btn-confirmar" onclick="confirmarAgendamento()">Confirmar</button>
+            <button class="btn-cancelar" onclick="fecharModal()">Cancelar</button>
+        </div>
+    </div>
+</div>
 
     <!-- Contêiner de Agendamento -->
     <div class="agendamento-container">
