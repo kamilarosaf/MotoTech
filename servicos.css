@@ -1,14 +1,22 @@
-/* Reset de margens e padding */
-* {
+/* Estilos gerais */
+body {
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #111; /* Fundo sólido em preto */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Barra de navegação fixa no topo */
 nav {
     width: 100%;
-    background-color: #222; /* Cor de fundo do cabeçalho */
+    background-color: #222; /* Fundo escuro */
     display: flex;
     justify-content: center;
     padding: 10px 0;
@@ -19,7 +27,6 @@ nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos do menu de navegação */
 nav ul {
     list-style: none;
     display: flex;
@@ -35,108 +42,106 @@ nav ul li a {
     color: #fff;
     font-size: 16px;
     text-decoration: none;
-    padding: 10px 15px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #ff9800;
-    border-radius: 5px;
-    transform: scale(1.1);
+    background-color: #ff6600; /* Laranja no hover */
 }
 
-/* Ajuste do conteúdo principal */
+/* Ajuste para o conteúdo */
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #111; /* Cor de fundo do corpo da página */
-    color: #fff;
-    padding-top: 80px; /* Espaço para a barra de navegação fixa */
-    overflow-x: hidden; /* Evitar rolagem horizontal */
+    padding-top: 70px; /* Espaço para evitar sobreposição com a barra de navegação */
 }
 
-/* Estilo do contêiner de serviços */
+/* Contêiner de Serviços */
 .servicos-container {
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: #222; /* Fundo sólido, sem imagem de fundo */
+    padding: 30px;
+    background-color: #222; /* Fundo sólido escuro */
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3); /* Sombra laranja sutil */
+    margin: 20px auto;
     text-align: center;
-    margin-top: 120px; /* Abaixo da barra fixa */
 }
 
 /* Título */
 h1 {
-    font-size: 32px;
-    color: #ff9800; /* Cor de destaque */
-    margin-bottom: 10px;
+    font-size: 28px;
+    color: #ff9800; /* Laranja */
+    margin-bottom: 20px;
 }
 
 h1 span {
-    color: #fff;
+    color: #fff; /* Contraste com o título */
 }
 
-/* Lista de Serviços (Grid Layout) */
+p {
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+/* Lista de Serviços em Grid */
 .servicos-lista {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adapta conforme a tela */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 20px;
+    width: 100%;
 }
 
 /* Estilo de cada serviço */
 .servico-item {
-    background-color: #333; /* Cor de fundo sólida */
-    padding: 30px;
+    background-color: #333; /* Fundo escuro dos itens */
+    color: #fff;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    height: 100%;
 }
 
-/* Efeito de hover para os serviços */
 .servico-item:hover {
-    transform: scale(1.05); /* Aumenta o tamanho quando passa o mouse */
-    box-shadow: 0px 8px 20px rgba(255, 165, 0, 0.5); /* Efeito de sombra */
+    transform: scale(1.05); /* Efeito de zoom */
+    box-shadow: 0px 8px 20px rgba(255, 165, 0, 0.5); /* Sombra mais intensa no hover */
 }
 
-/* Título de cada serviço */
 .servico-item h2 {
     font-size: 24px;
-    color: #ff9800; /* Cor do título */
+    color: #ff9800;
     margin-bottom: 15px;
 }
 
-/* Descrição de cada serviço */
 .servico-item p {
     color: #ddd;
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
-/* Botão de Agendar */
+/* Botão de ação */
 .btn-agendar {
-    background-color: #ff9800; /* Cor do botão */
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background-color: #ff9800; /* Laranja */
     color: #111;
-    text-transform: uppercase;
     font-size: 16px;
     font-weight: bold;
-    padding: 10px 20px;
     border: none;
     border-radius: 5px;
+    text-transform: uppercase;
     text-decoration: none;
-    display: inline-block;
+    cursor: pointer;
     transition: 0.3s;
 }
 
 .btn-agendar:hover {
-    background-color: #e68900;
-    transform: scale(1.1); /* Efeito de aumento do botão */
+    background-color: #e68900; /* Laranja mais escuro no hover */
 }
 
 /* Rodapé */
@@ -146,6 +151,7 @@ footer {
     color: #aaa;
     text-align: center;
     padding: 10px;
-    font-size: 14px;
+    position: relative;
     margin-top: 50px;
+    font-size: 14px;
 }
