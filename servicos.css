@@ -1,0 +1,127 @@
+/* Estilos gerais */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Contêiner do diretório de serviços */
+.servicos-container {
+    max-width: 800px;
+    padding: 30px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    color: #ff9800;
+}
+
+h1 span {
+    color: #fff;
+}
+
+p {
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* Barra de navegação */
+nav {
+    margin: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ff9800;
+    border-radius: 5px;
+}
+
+/* Estilos da lista de serviços */
+.servicos-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.servico-item {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
+    text-align: center;
+}
+
+.servico-item h2 {
+    font-size: 24px;
+    color: #ff9800;
+}
+
+.servico-item p {
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.btn-agendar {
+    padding: 12px 20px;
+    background-color: #ff9800;
+    color: #111;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-agendar:hover {
+    background-color: #e68900;
+}
+
+/* Rodapé */
+footer {
+    width: 100%;
+    background-color: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+}
