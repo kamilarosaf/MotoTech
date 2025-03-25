@@ -1,5 +1,5 @@
 function validarLogin(event) {
-    event.preventDefault(); // Previne o envio do formulário
+    event.preventDefault(); // Previne o envio do formulário para validação
 
     // Pegando os valores dos campos
     var usuario = document.getElementById('usuario').value;
@@ -11,19 +11,7 @@ function validarLogin(event) {
         return;
     }
 
-    // Definindo as credenciais corretas (pode ser alterado conforme necessidade)
-    var usuarioCorreto = "usuario"; // Usuário correto
-    var senhaCorreta = "senha123";  // Senha correta
-
-    // Validando as credenciais inseridas
-    if (usuario === usuarioCorreto && senha === senhaCorreta) {
-        // Se as credenciais estiverem corretas, armazena a informação no localStorage
-        localStorage.setItem('usuarioLogado', usuario);
-
-        // Redireciona para a página inicial
-        window.location.href = 'index.html'; // Altere o caminho conforme necessário
-    } else {
-        // Se as credenciais estiverem incorretas
-        alert("Usuário ou senha incorretos. Tente novamente.");
-    }
+    // Caso os campos estejam preenchidos, o formulário será enviado normalmente
+    // Agora, o formulário vai para o PHP, que fará a validação e o redirecionamento
+    document.getElementById('loginForm').submit(); // Submete o formulário
 }
