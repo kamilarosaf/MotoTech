@@ -1,3 +1,10 @@
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Barra de navegação fixa no topo */
 nav {
     width: 100%;
@@ -12,6 +19,7 @@ nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilos do menu de navegação */
 nav ul {
     list-style: none;
     display: flex;
@@ -40,24 +48,25 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-/* Ajuste do conteúdo */
+/* Ajuste do conteúdo principal */
 body {
-    padding-top: 80px; /* Espaço para a barra de navegação fixa */
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
     background-color: #111;
     color: #fff;
+    padding-top: 80px; /* Espaço para a barra de navegação fixa */
+    overflow-x: hidden; /* Evitar rolagem horizontal */
 }
 
-/* Estilo do contêiner */
+/* Estilo do contêiner de serviços */
 .servicos-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px;
-    background: #222;
+    background-color: #222;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
     text-align: center;
+    margin-top: 120px; /* Abaixo da barra fixa */
 }
 
 /* Título */
@@ -71,43 +80,48 @@ h1 span {
     color: #fff;
 }
 
-/* Lista de Serviços */
+/* Lista de Serviços (Grid Layout) */
 .servicos-lista {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adapta conforme a tela */
     gap: 30px;
     margin-top: 30px;
 }
 
+/* Estilo de cada serviço */
 .servico-item {
-    background: #333;
+    background-color: #333;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
 }
 
+/* Efeito de hover para os serviços */
 .servico-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(255, 165, 0, 0.5);
+    transform: scale(1.05); /* Aumenta o tamanho quando passa o mouse */
+    box-shadow: 0px 8px 20px rgba(255, 165, 0, 0.5); /* Efeito de sombra */
 }
 
+/* Título de cada serviço */
 .servico-item h2 {
     font-size: 24px;
     color: #ff9800;
     margin-bottom: 15px;
 }
 
+/* Descrição de cada serviço */
 .servico-item p {
     color: #ddd;
     font-size: 16px;
     margin-bottom: 20px;
 }
 
-/* Botão */
+/* Botão de Agendar */
 .btn-agendar {
-    background: #ff9800;
+    background-color: #ff9800;
     color: #111;
     text-transform: uppercase;
     font-size: 16px;
@@ -116,10 +130,22 @@ h1 span {
     border: none;
     border-radius: 5px;
     text-decoration: none;
+    display: inline-block;
     transition: 0.3s;
 }
 
 .btn-agendar:hover {
-    background: #e68900;
-    transform: scale(1.1);
+    background-color: #e68900;
+    transform: scale(1.1); /* Efeito de aumento do botão */
+}
+
+/* Rodapé */
+footer {
+    width: 100%;
+    background-color: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 50px;
 }
