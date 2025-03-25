@@ -1,7 +1,3 @@
-<a href="index.html" class="home-link">
-    <i class="fas fa-home"></i> Início
-</a>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,72 +13,60 @@
     <link rel="stylesheet" href="agendamento.css">
 </head>
 <body>
+    <!-- Atalho para a Tela Inicial -->
+    <a href="index.html" class="home-link">
+        <i class="fas fa-home"></i> Início
+    </a>
 
-<!-- Contêiner de Agendamento -->
-<div class="agendamento-container">
-    <h1>Agendamento de <span>Serviços</span></h1>
-    <p>Escolha o serviço ideal para sua motocicleta e agende agora mesmo!</p>
+    <!-- Contêiner de Agendamento -->
+    <div class="agendamento-container">
+        <h1>Agendamento de <span>Serviços</span></h1>
+        <p>Escolha o serviço ideal para sua motocicleta e agende agora mesmo!</p>
 
-    <!-- Formulário de Agendamento -->
-    <form action="processa-agendamento.php" method="POST">
-        <!-- Nome do Cliente -->
-        <div class="input-group">
-            <i class="fas fa-user"></i>
-            <input type="text" name="nome" placeholder="Seu Nome" required>
-        </div>
+        <!-- Formulário de Agendamento -->
+        <form action="processa-agendamento.php" method="POST">
+            <!-- Nome do Cliente -->
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" name="nome" placeholder="Seu Nome" required>
+            </div>
 
-        <!-- E-mail do Cliente -->
-        <div class="input-group">
-            <i class="fas fa-envelope"></i>
-            <input type="email" name="email" placeholder="Seu E-mail" required>
-        </div>
+            <!-- E-mail do Cliente -->
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Seu E-mail" required>
+            </div>
 
-        <!-- Seleção de Serviço -->
-        <div class="input-group">
-            <i class="fas fa-cogs"></i>
-            <select name="servico" required>
-                <option value="">Selecione o Serviço</option>
-                <option value="Troca de Óleo">Troca de Óleo</option>
-                <option value="Revisão Completa">Revisão Completa</option>
-                <option value="Troca de Pneus">Troca de Pneus</option>
-                <option value="Ajuste de Suspensão">Ajuste de Suspensão</option>
-                <option value="Diagnóstico Elétrico">Diagnóstico Elétrico</option>
-            </select>
-        </div>
+            <!-- Seleção de Serviço -->
+            <div class="input-group">
+                <i class="fas fa-cogs"></i>
+                <select name="servico" required>
+                    <option value="">Selecione o Serviço</option>
+                    <option value="Troca de Óleo">Troca de Óleo</option>
+                    <option value="Revisão Completa">Revisão Completa</option>
+                    <option value="Troca de Pneus">Troca de Pneus</option>
+                    <option value="Ajuste de Suspensão">Ajuste de Suspensão</option>
+                    <option value="Diagnóstico Elétrico">Diagnóstico Elétrico</option>
+                </select>
+            </div>
 
-        <!-- Data do Agendamento -->
-        <div class="input-group">
-            <i class="fas fa-calendar-alt"></i>
-            <input type="date" name="data" required>
-        </div>
+            <!-- Data do Agendamento -->
+            <div class="input-group">
+                <i class="fas fa-calendar-alt"></i>
+                <input type="date" name="data" required>
+            </div>
 
-        <!-- Botão de Agendamento -->
-        <button type="submit" class="btn-agendamento">Agendar Serviço</button>
-    </form>
-</div>
-
-<!-- Modal de Confirmação (não duplicado) -->
-<div id="modalConfirmacao" class="modal">
-    <div class="modal-content">
-        <h2>Confirme seu Agendamento</h2>
-        <p><strong>Serviço:</strong> <span id="confirmaServico"></span></p>
-        <p><strong>Data:</strong> <span id="confirmaData"></span></p>
-        <p><strong>Horário:</strong> <span id="confirmaHorario"></span></p>
-        
-        <div class="modal-buttons">
-            <button class="btn-confirmar" onclick="confirmarAgendamento()">Confirmar</button>
-            <button class="btn-cancelar" onclick="fecharModal()">Cancelar</button>
-        </div>
+            <!-- Botão de Envio -->
+            <button type="submit" class="btn-agendamento">Agendar Serviço</button>
+        </form>
     </div>
-</div>
 
-<!-- Rodapé -->
-<footer>
-    <p>&copy; 2025 Kamila Rosa. Todos os direitos reservados.</p>
-</footer>
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Kamila Rosa. Todos os direitos reservados.</p>
+    </footer>
 
-<!-- Script de Validação JavaScript (Opcional) -->
-<script src="agendamento.js"></script>
-
+    <!-- Script de Validação JavaScript (Opcional) -->
+    <script src="agendamento.js"></script>
 </body>
 </html>
