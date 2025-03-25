@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial - MotoTech</title>
+    <title>Início - MotoTech</title>
 
     <!-- Google Fonts e Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="index.css">
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <script>
-        // Verifica se o usuário está logado
-        if (!localStorage.getItem('usuarioLogado')) {
-            // Se não estiver logado, redireciona para a página de login
-            window.location.href = 'login.html';
-        }
-    </script>
-
     <!-- Conteúdo da página inicial -->
-    <div class="home-container">
+    <header>
         <h1>Bem-vindo à MotoTech!</h1>
-        <p>Você está logado.</p>
+        <p>Seu site de serviços automotivos</p>
+    </header>
 
-        <a href="logout.html" class="btn-logout">Sair</a>
-    </div>
+    <!-- Link de navegação -->
+    <nav>
+        <a href="login.html">Login</a> <!-- Link para a página de login -->
+    </nav>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Kamila Rosa. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>
