@@ -91,4 +91,7 @@ body::before {
         background-position: center center;
     }
 }
+body {
+    text-align: center; /* Centraliza todo o texto dentro do body */
+}
 
