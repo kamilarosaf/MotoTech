@@ -12,9 +12,9 @@ body {
     flex-direction: column;
 }
 
-/* Contêiner do diretório de serviços */
+/* Contêiner de Serviços */
 .servicos-container {
-    max-width: 800px;
+    max-width: 500px;
     padding: 30px;
     background-color: #222;
     border-radius: 10px;
@@ -22,6 +22,7 @@ body {
     text-align: center;
 }
 
+/* Título */
 h1 {
     font-size: 28px;
     color: #ff9800;
@@ -39,7 +40,7 @@ p {
 
 /* Barra de navegação */
 nav {
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 nav ul {
@@ -66,7 +67,7 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Estilos da lista de serviços */
+/* Estilos para os itens de serviço */
 .servicos-lista {
     display: flex;
     flex-direction: column;
@@ -81,7 +82,7 @@ nav ul li a:hover {
     margin: 15px;
     border-radius: 10px;
     width: 80%;
-    max-width: 600px;
+    max-width: 500px;
     box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
     text-align: center;
 }
@@ -97,17 +98,20 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+/* Botão de agendamento */
 .btn-agendar {
-    padding: 12px 20px;
+    width: 100%;
+    padding: 12px;
     background-color: #ff9800;
     color: #111;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
     text-decoration: none;
     display: inline-block;
-    transition: 0.3s;
 }
 
 .btn-agendar:hover {
@@ -121,7 +125,7 @@ footer {
     color: #aaa;
     text-align: center;
     padding: 10px;
-    font-size: 14px;
     position: fixed;
     bottom: 0;
+    font-size: 14px;
 }
