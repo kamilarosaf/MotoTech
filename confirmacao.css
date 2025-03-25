@@ -1,0 +1,88 @@
+/* Estilos gerais */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Atalho para a Tela Inicial */
+.home-link {
+    display: inline-block;
+    background-color: #ff6600; /* Laranja */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.home-link i {
+    margin-right: 8px;
+}
+
+/* Contêiner de confirmação */
+.confirmacao-container {
+    max-width: 500px;
+    padding: 30px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    color: #ff9800;
+}
+
+p {
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+ul.detalhes {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    color: #fff;
+}
+
+ul.detalhes li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+ul.detalhes li strong {
+    color: #ff9800;
+}
+
+/* Botão de voltar */
+.btn-voltar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #ff9800;
+    color: #111;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: #e68900;
+}
