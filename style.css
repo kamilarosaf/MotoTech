@@ -1,101 +1,65 @@
-/* Importa uma fonte moderna do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
-
-/* Estilos globais */
+/* Fundo gradiente com tema escuro */
 body {
-    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('background.jpg') no-repeat center center/cover;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #000, #333); /* Preto para cinza degradê */
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 100vh;
+    color: white;
     text-align: center;
 }
 
+/* Contêiner central */
 .container {
-    width: 90%;
-    max-width: 400px;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.85); /* Fundo semitransparente */
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* Efeito de sombra */
 }
 
+/* Logo da marca */
 .logo {
-    font-size: 32px;
-    font-weight: 700;
-    color: white;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.slogan {
-    font-size: 16px;
-    color: #ddd;
+    max-width: 150px;
     margin-bottom: 20px;
 }
 
-.btn-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
+/* Botões interativos */
 .btn {
-    background: #ff4500;
+    display: inline-block;
+    background: #ff4500; /* Cor inicial */
     color: white;
-    font-size: 16px;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    text-decoration: none;
     text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease, transform 0.2s ease; /* Suavidade na transição */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Leve sombra */
 }
 
 .btn:hover {
-    background: #ff5722;
+    background: #ff5722; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o botão */
+    box-shadow: 0px 8px 15px rgba(255, 87, 34, 0.5);
 }
 
-@media (max-width: 600px) {
-    .container {
-        width: 95%;
-    }
-}
-@media (max-width: 480px) {
-    h1 {
-        font-size: 20px;
-    }
-    .btn {
-        font-size: 14px;
-        padding: 10px;
-    }
-}
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.btn {
-    animation: fadeIn 0.6s ease-in-out;
-}
 .btn:active {
-    transform: scale(0.95);
-    box-shadow: 0 0 5px rgba(255, 87, 34, 0.8);
+    transform: scale(0.98); /* Reduz ligeiramente ao clicar */
 }
+
+/* Rodapé */
 footer {
     font-size: 14px;
-    color: #ccc;
-    text-align: center;
     margin-top: 20px;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #111;
+    color: #aaa;
+    width: 100%;
+    text-align: center;
     border-top: 1px solid #555;
 }
