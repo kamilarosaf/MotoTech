@@ -3,144 +3,31 @@ body {
     font-family: 'Montserrat', sans-serif; /* Fonte padrão */
     margin: 0;
     padding: 0;
-    background-color: #111; /* Fundo sólido escuro */
+    background-color: #111; /* Fundo sólido preto */
     color: #fff; /* Texto branco */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
+    justify-content: center;
+    height: 100vh; /* Altura total da tela */
     overflow-x: hidden;
 }
 
-/* Barra de navegação fixa no topo */
-nav {
-    width: 100%;
-    background-color: #222; /* Fundo mais escuro */
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil */
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff; /* Link branco */
-    font-size: 16px;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: transparent;
-    transition: 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: #ff9800; /* Cor laranja no hover */
-}
-
-/* Espaçamento para evitar sobreposição */
-body {
-    padding-top: 70px; /* Para evitar sobreposição com a barra de navegação */
-}
-
-/* Contêiner principal para Serviços */
-.servicos-container {
-    width: 100%;
-    max-width: 1200px;
-    padding: 30px;
-    background-color: #222; /* Fundo sólido escuro */
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3); /* Sombra laranja sutil */
-    margin: 20px auto;
-    text-align: center;
-}
-
-/* Título */
-h1 {
-    font-size: 28px;
-    color: #ff9800; /* Título laranja */
-    margin-bottom: 20px;
-}
-
-h1 span {
-    color: #fff; /* Parte do título em branco */
-}
-
-p {
-    font-size: 16px;
-    color: #ddd; /* Cinza claro */
-    margin-bottom: 30px;
-}
-
-/* Lista de Serviços em Grid */
-.servicos-lista {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
-    width: 100%;
-}
-
-/* Cada Serviço */
-.servico-item {
-    background-color: #333; /* Fundo escuro para os itens */
-    color: #fff; /* Texto branco */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3); /* Sombra laranja */
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.servico-item:hover {
-    transform: scale(1.05); /* Zoom suave no hover */
-    box-shadow: 0px 8px 20px rgba(255, 165, 0, 0.5); /* Sombra mais intensa */
-}
-
-.servico-item h2 {
-    font-size: 24px;
-    color: #ff9800; /* Títulos em laranja */
-    margin-bottom: 15px;
-}
-
-.servico-item p {
-    color: #ddd; /* Texto cinza claro */
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-/* Botão */
-.btn-agendar {
+/* Atalho para a Tela Inicial */
+.home-link {
     display: inline-block;
-    width: 100%;
-    padding: 12px;
-    background-color: #ff9800; /* Botão laranja */
+    background-color: #ff9800; /* Cor laranja */
     color: #111; /* Texto preto para contraste */
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
+    padding: 12px 20px;
     border-radius: 5px;
     text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
     text-decoration: none;
-    cursor: pointer;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
-.btn-agendar:hover {
+.home-link:hover {
     background-color: #e68900; /* Laranja mais escuro no hover */
 }
 
@@ -151,7 +38,7 @@ footer {
     color: #aaa; /* Cinza claro */
     text-align: center;
     padding: 10px;
-    position: relative;
-    margin-top: 50px;
+    position: fixed;
+    bottom: 0;
     font-size: 14px;
 }
