@@ -1,22 +1,15 @@
-// login.js
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio do formulário padrão
 
-document.getElementById('login-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o envio do formulário
+    // Simulando autenticação (exemplo básico)
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
-    // Usuário e senha armazenados no código
-    const usuarioCorreto = "usuario1";
-    const senhaCorreta = "senha123";
-
-    // Pegando os valores dos campos do formulário
-    const usuario = document.getElementById('usuario').value;
-    const senha = document.getElementById('senha').value;
-
-    // Verificando se o usuário e a senha estão corretos
-    if (usuario === usuarioCorreto && senha === senhaCorreta) {
-        // Se os dados estiverem corretos, redireciona para a página inicial
-        window.location.href = "index.html"; // Redireciona para a página principal
+    // Substitua essa validação pela lógica do servidor
+    if (username === 'admin' && password === '1234') {
+        alert('Login realizado com sucesso!');
+        window.location.href = 'index.html'; // Redireciona para a tela inicial
     } else {
-        // Caso o login falhe, exibe uma mensagem de erro
-        alert("Usuário ou senha incorretos!"); // Mensagem de erro
+        alert('Credenciais inválidas. Tente novamente.');
     }
 });
