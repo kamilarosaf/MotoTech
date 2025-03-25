@@ -8,20 +8,38 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
+    <!-- Atalho para a página inicial -->
+    <a href="index.html" class="home-link">Início</a>
+
+    <!-- Contêiner de login -->
     <div class="login-container">
         <h1>Login</h1>
         <form id="loginForm">
+            <!-- Campo de Usuário -->
             <div class="input-group">
                 <label for="username">Usuário</label>
                 <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
             </div>
+            <!-- Campo de Senha -->
             <div class="input-group">
                 <label for="password">Senha</label>
                 <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
             </div>
+            <!-- Botão de Login -->
             <button type="submit" class="btn-login">Entrar</button>
         </form>
+
+        <!-- Links extras -->
+        <div class="login-links">
+            <a href="esqueceu-senha.html" class="link">Esqueceu a senha?</a>
+            <a href="criar-conta.html" class="link">Criar Conta</a>
+        </div>
     </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 MotoTech. Todos os direitos reservados.</p>
+    </footer>
 </body>
 <script src="login.js"></script>
 </html>
