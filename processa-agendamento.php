@@ -6,11 +6,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $servico = $_POST['servico'];
     $data = $_POST['data'];
 
-    // Aqui você pode salvar os dados em um banco de dados ou enviar um e-mail, por exemplo
-    // Exemplo de salvar em banco (não implementado aqui)
-
-    // Redireciona para a página de sucesso
-    header("Location: sucesso.html"); // Página de sucesso após o agendamento
-    exit; // Não se esqueça de chamar exit após o redirecionamento
+    // Exibe os dados para depuração (temporariamente)
+    echo "<h2>Dados do Agendamento:</h2>";
+    echo "Nome: " . htmlspecialchars($nome) . "<br>";
+    echo "Email: " . htmlspecialchars($email) . "<br>";
+    echo "Serviço: " . htmlspecialchars($servico) . "<br>";
+    echo "Data: " . htmlspecialchars($data) . "<br>";
 }
 ?>
