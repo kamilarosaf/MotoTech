@@ -25,7 +25,7 @@
         <p>Bem-vindo! Faça login para continuar.</p>
 
         <!-- Formulário de Login -->
-        <form id="loginForm">
+        <form id="loginForm" onsubmit="validarLogin(event)">
             <div class="input-group">
                 <i class="fas fa-user"></i>
                 <input type="text" id="usuario" placeholder="Usuário" required>
@@ -48,7 +48,7 @@
         <p>&copy; 2025 Kamila Rosa. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- Link para o arquivo JS -->
     <script src="login.js"></script>
 </body>
 </html>
-
