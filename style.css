@@ -1,4 +1,4 @@
-/* ===== Fundo com imagem de fundo transparente ===== */
+/* ===== Estilos gerais ===== */
 body {
     margin: 0;
     padding: 0;
@@ -11,35 +11,21 @@ body {
     flex-direction: column;
     height: 100vh;
     position: relative;
-    background: url('fundo.jpg') center/cover no-repeat fixed; /* Caminho da imagem */
+    background: url('assets/moto-background.jpg') center/cover no-repeat fixed; /* Ajuste o caminho da imagem */
 }
 
-/* Adicionando um overlay escuro para melhorar a legibilidade */
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Escurece o fundo */
-    z-index: -1;
-}
-
-
-/* ===== Fundo com imagem transparente ===== */
+/* Camada de fundo transparente para melhor legibilidade */
 .background-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('assets/moto-background.jpg') center/cover no-repeat; /* Altere 'fundo.jpg' para sua imagem */
-    filter: brightness(0.4); /* Torna a imagem mais escura para contraste */
+    background: rgba(0, 0, 0, 0.5);
     z-index: -1;
 }
 
-/* ===== Container central ===== */
+/* ===== Container principal ===== */
 .container {
     position: relative;
     z-index: 1;
