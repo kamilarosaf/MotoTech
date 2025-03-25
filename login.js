@@ -11,6 +11,19 @@ function validarLogin(event) {
         return;
     }
 
-    // Caso os campos estejam preenchidos, o formulário será enviado
-    event.target.submit(); // Envia o formulário
+    // Definindo as credenciais corretas (pode ser alterado conforme necessidade)
+    var usuarioCorreto = "usuario"; // Usuário correto
+    var senhaCorreta = "senha123";  // Senha correta
+
+    // Validando as credenciais inseridas
+    if (usuario === usuarioCorreto && senha === senhaCorreta) {
+        // Se as credenciais estiverem corretas, armazena a informação no localStorage
+        localStorage.setItem('usuarioLogado', usuario);
+
+        // Redireciona para a página inicial
+        window.location.href = 'index.html'; // Altere o caminho conforme necessário
+    } else {
+        // Se as credenciais estiverem incorretas
+        alert("Usuário ou senha incorretos. Tente novamente.");
+    }
 }
