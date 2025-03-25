@@ -1,9 +1,9 @@
-/* Fundo gradiente com tema escuro */
+/* Estilo geral do corpo */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(to bottom, #000, #333); /* Preto para cinza degradê */
+    background: linear-gradient(to bottom, #000, #333); /* Gradiente escuro */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,90 +11,62 @@ body {
     height: 100vh;
     color: white;
     text-align: center;
-    position: relative; /* Necessário para posicionar o pseudo-elemento */
 }
 
-/* Camada de sobreposição */
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Preto transparente */
-    z-index: -1; /* Mantém a camada atrás do conteúdo */
+/* Logo em texto */
+.logo-text h1 {
+    font-size: 60px; /* Tamanho de fonte para "MOTO" */
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 5px; /* Distância entre letras */
+    color: #ff4500; /* Cor laranja para o "MOTO" */
 }
 
-/* Contêiner central */
+.logo-text h2 {
+    font-size: 120px; /* Tamanho maior para "TECH" */
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 8px; /* Distância entre letras */
+    color: #ff5722; /* Cor mais forte para o "TECH" */
+    text-transform: uppercase; /* Deixa "TECH" em maiúsculas */
+    margin-top: -10px; /* Aproxima "TECH" de "MOTO" */
+}
+
+/* Contêiner do conteúdo */
 .container {
+    text-align: center;
+    padding: 20px;
     background: rgba(0, 0, 0, 0.85); /* Fundo semitransparente */
-    padding: 20px 30px;
     border-radius: 12px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* Efeito de sombra */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Logo da marca */
-.logo {
-    max-width: 150px;
-    margin-bottom: 20px;
-}
-
-/* Estilo dos botões */
+/* Botões */
 .btn {
     display: inline-block;
-    background: linear-gradient(145deg, #ff4500, #ff5722); /* Gradiente suave para o botão */
+    background: linear-gradient(145deg, #ff4500, #ff5722);
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    padding: 15px 30px;  /* Aumentei o padding para botões mais largos */
+    padding: 15px 30px;
     margin: 10px;
-    border-radius: 50px;  /* Bordas arredondadas para um visual mais moderno */
-    transition: all 0.3s ease, transform 0.3s ease; /* Transição suave para todos os efeitos */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Leve sombra para destacar o botão */
-    font-size: 16px;  /* Um pouco maior para tornar o texto mais legível */
+    border-radius: 50px;
+    transition: all 0.3s ease, transform 0.3s ease;
+    font-size: 16px;
 }
 
 .btn:hover {
-    background: linear-gradient(145deg, #ff5722, #ff4500); /* Inverter o gradiente no hover */
-    transform: translateY(-5px);  /* Eleva o botão um pouco ao passar o mouse */
-    box-shadow: 0px 10px 20px rgba(255, 87, 34, 0.3); /* Sombra mais forte ao passar o mouse */
+    background: linear-gradient(145deg, #ff5722, #ff4500);
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(255, 87, 34, 0.3);
 }
 
 .btn:active {
-    transform: translateY(2px); /* Efeito de "afundar" ao clicar */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra mais leve ao clicar */
+    transform: translateY(2px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Efeito de foco para melhorar a acessibilidade */
-.btn:focus {
-    outline: none;  /* Remove o contorno padrão */
-    box-shadow: 0px 0px 10px 2px rgba(255, 87, 34, 0.8); /* Adiciona um contorno colorido quando o botão é focado */
-}
-
-/* Animando o texto para dar um efeito de entrada mais moderno */
-.btn span {
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}
-
-.btn:hover span {
-    transform: translateX(10px);  /* Efeito de deslizar o texto ao passar o mouse */
-}
-
-/* Adicionando efeito visual ao ícone do Font Awesome dentro dos botões */
-.btn i {
-    margin-right: 10px;
-    transition: 0.3s ease-in-out;
-}
-
-.btn:hover i {
-    transform: rotate(360deg); /* Animação de rotação do ícone ao passar o mouse */
-}
-
-/* Rodapé */
 footer {
     font-size: 14px;
     margin-top: 20px;
@@ -104,11 +76,4 @@ footer {
     width: 100%;
     text-align: center;
     border-top: 1px solid #555;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 600px) {
-    body {
-        background-position: center center;
-    }
 }
