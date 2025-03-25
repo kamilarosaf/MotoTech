@@ -1,4 +1,4 @@
-/* Estilo geral */
+/* Estilos gerais */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -6,17 +6,37 @@ body {
     background-color: #111; /* Fundo preto */
     color: #fff; /* Texto branco */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-/* Contêiner de login */
+/* Atalho para a tela inicial */
+.home-link {
+    display: inline-block;
+    background-color: #ff9800; /* Cor laranja */
+    color: #111; /* Texto preto para contraste */
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.home-link:hover {
+    background-color: #e68900; /* Laranja mais escuro */
+}
+
+/* Contêiner do login */
 .login-container {
     background-color: #222; /* Fundo escuro */
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3); /* Sombra sutil */
     text-align: center;
     width: 100%;
     max-width: 400px;
@@ -59,4 +79,34 @@ body {
 
 .btn-login:hover {
     background-color: #e68900; /* Laranja mais escuro */
+}
+
+/* Links adicionais */
+.login-links {
+    margin-top: 15px;
+}
+
+.login-links .link {
+    display: inline-block;
+    color: #ff9800; /* Laranja */
+    font-size: 14px;
+    text-decoration: none;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.login-links .link:hover {
+    color: #e68900; /* Laranja mais escuro */
+}
+
+/* Rodapé */
+footer {
+    width: 100%;
+    background-color: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    font-size: 14px;
 }
