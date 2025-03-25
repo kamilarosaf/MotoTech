@@ -6,20 +6,60 @@ body {
     background-color: #111;
     color: #fff;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Barra de navegação no topo */
+nav {
+    width: 100%;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #ff9800;
+    border-radius: 5px;
 }
 
 /* Contêiner de Serviços */
 .servicos-container {
-    max-width: 500px;
+    margin-top: 80px; /* Espaçamento devido ao menu fixo */
+    width: 100%;
+    max-width: 1000px;
     padding: 30px;
     background-color: #222;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
     text-align: center;
+    margin-bottom: 50px;
 }
 
 /* Título */
@@ -33,58 +73,34 @@ h1 span {
 }
 
 p {
-    font-size: 14px;
-    color: #ddd;
-    margin-bottom: 20px;
-}
-
-/* Barra de navegação */
-nav {
-    margin-bottom: 20px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
     font-size: 16px;
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: background-color 0.3s;
+    color: #ddd;
+    margin-bottom: 30px;
 }
 
-nav ul li a:hover {
-    background-color: #ff9800;
-    border-radius: 5px;
-}
-
-/* Estilos para os itens de serviço */
+/* Lista de serviços */
 .servicos-lista {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
+/* Item do serviço */
 .servico-item {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 25px;
     margin: 15px;
     border-radius: 10px;
-    width: 80%;
-    max-width: 500px;
     box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servico-item:hover {
+    transform: translateY(-5px); /* Pequeno efeito de elevação */
+    box-shadow: 0px 8px 20px rgba(255, 165, 0, 0.5);
 }
 
 .servico-item h2 {
@@ -98,13 +114,12 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/* Botão de agendamento */
+/* Botão de agendamento moderno */
 .btn-agendar {
-    width: 100%;
-    padding: 12px;
+    padding: 12px 20px;
     background-color: #ff9800;
     color: #111;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     border: none;
     border-radius: 5px;
@@ -112,6 +127,8 @@ nav ul li a:hover {
     transition: 0.3s;
     text-decoration: none;
     display: inline-block;
+    margin-top: 20px;
+    width: 100%;
 }
 
 .btn-agendar:hover {
@@ -125,7 +142,7 @@ footer {
     color: #aaa;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
     font-size: 14px;
+    position: relative;
+    margin-top: 50px;
 }
