@@ -12,6 +12,27 @@ body {
     flex-direction: column;
 }
 
+/* Atalho para a Tela Inicial */
+.home-link {
+    display: inline-block;
+    background-color: #ff6600; /* Laranja */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.home-link i {
+    margin-right: 8px;
+}
+
+.home-link:hover {
+    background-color: #e65c00; /* Laranja mais escuro */
+}
+
 /* Contêiner do agendamento */
 .agendamento-container {
     max-width: 500px;
@@ -68,6 +89,29 @@ input::placeholder {
     color: #bbb;
 }
 
+/* Corrige o fundo da caixa de seleção */
+.input-group select {
+    background-color: #333; /* Fundo escuro para manter a consistência */
+    color: #fff; /* Texto branco para visibilidade */
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    appearance: none; /* Remove estilos padrões do navegador */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Estilo ao expandir */
+.input-group select:focus {
+    background-color: #444; /* Fundo um pouco mais claro no foco */
+}
+
+/* Corrige as opções (option) que estavam transparentes */
+.input-group select option {
+    background-color: #222; /* Mantém o fundo escuro */
+    color: #fff; /* Texto branco para melhor legibilidade */
+}
+
 /* Botão de Agendamento */
 .btn-agendamento {
     width: 100%;
@@ -97,28 +141,7 @@ footer {
     bottom: 0;
     font-size: 14px;
 }
-/* Correção do fundo da caixa de seleção */
-.input-group select {
-    background-color: #333; /* Fundo escuro para manter a consistência */
-    color: #fff; /* Texto branco para visibilidade */
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    appearance: none; /* Remove estilos padrões do navegador */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
 
-/* Estilo ao expandir */
-.input-group select:focus {
-    background-color: #444; /* Fundo um pouco mais claro no foco */
-}
-
-/* Corrige as opções (option) que estavam transparentes */
-.input-group select option {
-    background-color: #222; /* Mantém o fundo escuro */
-    color: #fff; /* Texto branco para melhor legibilidade */
-}
 /* Estiliza o modal (popup de confirmação) */
 .modal {
     display: none; /* Inicialmente oculto */
@@ -174,68 +197,7 @@ footer {
 .btn-confirmar:hover {
     background: #ff5722;
 }
-.container {
-    text-align: center;
-    background: #222;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 400px;
-    margin: 50px auto;
-    box-shadow: 0px 0px 10px rgba(255, 87, 34, 0.7);
-}
-
-.buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.btn-confirmar, .btn-cancelar {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn-confirmar {
-    background: #ff4500;
-    color: white;
-}
-
-.btn-cancelar {
-    background: gray;
-    color: white;
-}
-
-.btn-confirmar:hover {
-    background: #ff5722;
-}
 
 .btn-cancelar:hover {
     background: #777;
-}
-
-
-.btn-cancelar:hover {
-    background: #777;
-}
-.home-link {
-    display: inline-block;
-    background-color: #ff6600; /* Laranja */
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-bottom: 15px;
-    transition: 0.3s;
-}
-
-.home-link i {
-    margin-right: 8px;
-}
-
-.home-link:hover {
-    background-color: #e65c00; /* Laranja mais escuro */
 }
