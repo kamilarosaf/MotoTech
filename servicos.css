@@ -1,10 +1,10 @@
 /* Estilos gerais */
 body {
-    font-family: 'Montserrat', sans-serif; /* Padrão de fonte */
+    font-family: 'Montserrat', sans-serif; /* Fonte padrão */
     margin: 0;
     padding: 0;
-    background-color: #111; /* Cor sólida de fundo escuro */
-    color: #fff; /* Cor do texto */
+    background-color: #111; /* Fundo sólido escuro */
+    color: #fff; /* Texto branco */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,7 +16,7 @@ body {
 /* Barra de navegação fixa no topo */
 nav {
     width: 100%;
-    background-color: #222; /* Fundo escuro */
+    background-color: #222; /* Fundo mais escuro */
     display: flex;
     justify-content: center;
     padding: 10px 0;
@@ -24,7 +24,7 @@ nav {
     top: 0;
     left: 0;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil */
 }
 
 nav ul {
@@ -39,25 +39,25 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff; /* Cor branca */
+    color: #fff; /* Link branco */
     font-size: 16px;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
     background-color: transparent;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 nav ul li a:hover {
     background-color: #ff9800; /* Cor laranja no hover */
 }
 
-/* Ajuste do conteúdo */
+/* Espaçamento para evitar sobreposição */
 body {
-    padding-top: 70px; /* Espaço para evitar sobreposição com a barra de navegação */
+    padding-top: 70px; /* Para evitar sobreposição com a barra de navegação */
 }
 
-/* Contêiner de Serviços */
+/* Contêiner principal para Serviços */
 .servicos-container {
     width: 100%;
     max-width: 1200px;
@@ -72,17 +72,17 @@ body {
 /* Título */
 h1 {
     font-size: 28px;
-    color: #ff9800; /* Cor laranja para o título */
+    color: #ff9800; /* Título laranja */
     margin-bottom: 20px;
 }
 
 h1 span {
-    color: #fff; /* Complementar com a cor branca */
+    color: #fff; /* Parte do título em branco */
 }
 
 p {
     font-size: 16px;
-    color: #ddd; /* Cinza claro para o texto */
+    color: #ddd; /* Cinza claro */
     margin-bottom: 30px;
 }
 
@@ -95,41 +95,41 @@ p {
     width: 100%;
 }
 
-/* Estilo de cada serviço */
+/* Cada Serviço */
 .servico-item {
-    background-color: #333; /* Fundo escuro dos itens */
+    background-color: #333; /* Fundo escuro para os itens */
     color: #fff; /* Texto branco */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3); /* Sombra laranja sutil */
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3); /* Sombra laranja */
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .servico-item:hover {
-    transform: scale(1.05); /* Efeito de zoom */
-    box-shadow: 0px 8px 20px rgba(255, 165, 0, 0.5); /* Sombra mais intensa no hover */
+    transform: scale(1.05); /* Zoom suave no hover */
+    box-shadow: 0px 8px 20px rgba(255, 165, 0, 0.5); /* Sombra mais intensa */
 }
 
 .servico-item h2 {
     font-size: 24px;
-    color: #ff9800; /* Cor laranja para os títulos dos serviços */
+    color: #ff9800; /* Títulos em laranja */
     margin-bottom: 15px;
 }
 
 .servico-item p {
-    color: #ddd; /* Cinza claro para os parágrafos */
+    color: #ddd; /* Texto cinza claro */
     font-size: 14px;
     margin-bottom: 15px;
 }
 
-/* Botão de ação */
+/* Botão */
 .btn-agendar {
     display: inline-block;
     width: 100%;
     padding: 12px;
-    background-color: #ff9800; /* Cor laranja para o botão */
-    color: #111; /* Cor preta para contraste */
+    background-color: #ff9800; /* Botão laranja */
+    color: #111; /* Texto preto para contraste */
     font-size: 16px;
     font-weight: bold;
     border: none;
@@ -137,17 +137,17 @@ p {
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .btn-agendar:hover {
-    background-color: #e68900; /* Cor laranja mais escura no hover */
+    background-color: #e68900; /* Laranja mais escuro no hover */
 }
 
 /* Rodapé */
 footer {
     width: 100%;
-    background-color: #000; /* Cor preta para o rodapé */
+    background-color: #000; /* Preto sólido */
     color: #aaa; /* Cinza claro */
     text-align: center;
     padding: 10px;
