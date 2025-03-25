@@ -85,3 +85,24 @@
 
 </body>
 </html>
+<!-- Formulário de Agendamento -->
+<form id="formAgendamento" onsubmit="redirecionarConfirmacao(event)">
+    <label for="servico">Escolha o serviço:</label>
+    <select id="servico" name="servico" required>
+        <option value="">Selecione...</option>
+        <option value="Troca de óleo">Troca de óleo</option>
+        <option value="Revisão geral">Revisão geral</option>
+        <option value="Alinhamento">Alinhamento</option>
+    </select>
+
+    <label for="data">Data:</label>
+    <input type="date" id="data" name="data" required>
+
+    <label for="horario">Horário:</label>
+    <input type="time" id="horario" name="horario" required>
+
+    <button type="submit" class="btn-agendar">Agendar Serviço</button>
+</form>
+
+<!-- Importa o JavaScript -->
+<script src="agendamento.js"></script>
