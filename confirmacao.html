@@ -4,23 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmação de Agendamento - MotoTech</title>
-    <link rel="stylesheet" href="agendamento.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="confirmacao.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Confirme seu Agendamento</h1>
-        <p><strong>Serviço:</strong> <span id="confirmaServico"></span></p>
-        <p><strong>Data:</strong> <span id="confirmaData"></span></p>
-        <p><strong>Horário:</strong> <span id="confirmaHorario"></span></p>
+    <!-- Atalho para a Tela Inicial -->
+    <a href="index.html" class="home-link">
+        <i class="fas fa-home"></i> Início
+    </a>
 
-        <div class="buttons">
-            <button class="btn-confirmar" onclick="confirmarAgendamento()">Confirmar</button>
-            <button class="btn-cancelar" onclick="voltarAgendamento()">Editar</button>
-        </div>
+    <div class="confirmacao-container">
+        <h1>Confirmação de Agendamento</h1>
+        <p>Seu serviço foi agendado com sucesso! Aqui estão os detalhes:</p>
+
+        <ul class="detalhes">
+            <li><strong>Nome:</strong> <span id="nome"></span></li>
+            <li><strong>E-mail:</strong> <span id="email"></span></li>
+            <li><strong>Serviço:</strong> <span id="servico"></span></li>
+            <li><strong>Data:</strong> <span id="data"></span></li>
+        </ul>
+
+        <a href="index.html" class="btn-voltar">Voltar para a Página Inicial</a>
     </div>
 
-    <!-- Importa o JavaScript -->
+    <footer>
+        <p>&copy; 2025 Kamila Rosa. Todos os direitos reservados.</p>
+    </footer>
+
     <script src="confirmacao.js"></script>
 </body>
 </html>
