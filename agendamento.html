@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - MotoTech</title>
+
+    <!-- Google Fonts e Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Arquivo CSS -->
+    <link rel="stylesheet" href="agendamento.css">
+</head>
+<body>
+
+    <!-- Contêiner de Agendamento -->
+    <div class="agendamento-container">
+        <h1>Agendamento de Serviços</h1>
+        <p>Escolha o serviço que você deseja agendar para sua motocicleta.</p>
+
+        <!-- Formulário de Agendamento -->
+        <form action="processa-agendamento.php" method="POST">
+            <!-- Nome do Cliente -->
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" name="nome" placeholder="Seu nome" required>
+            </div>
+
+            <!-- E-mail do Cliente -->
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+            </div>
+
+            <!-- Seleção de Serviço -->
+            <div class="input-group">
+                <i class="fas fa-cogs"></i>
+                <select name="servico" required>
+                    <option value="">Selecione o serviço</option>
+                    <option value="Troca de Óleo">Troca de Óleo</option>
+                    <option value="Revisão Completa">Revisão Completa</option>
+                    <option value="Troca de Pneus">Troca de Pneus</option>
+                    <option value="Suspensão">Ajuste de Suspensão</option>
+                    <option value="Diagnóstico Elétrico">Diagnóstico Elétrico</option>
+                </select>
+            </div>
+
+            <!-- Data do Agendamento -->
+            <div class="input-group">
+                <i class="fas fa-calendar-alt"></i>
+                <input type="date" name="data" required>
+            </div>
+
+            <!-- Botão de Envio -->
+            <button type="submit" class="btn-agendamento">Agendar Serviço</button>
+        </form>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Kamila Rosa. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script de Validação JavaScript (Opcional) -->
+    <script src="agendamento.js"></script>
+
+</body>
+</html>
