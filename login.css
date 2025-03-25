@@ -1,136 +1,110 @@
-/* Estilizando a página de login */
+/* ======= Estilo Geral ======= */
 body {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(to bottom, #000, #222); /* Fundo escuro */
-    color: white;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #000, #333); /* Fundo preto para cinza */
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    margin: 0;
+    color: white;
+    text-align: center;
 }
 
-/* Caixa de login */
+/* ======= Contêiner de Login ======= */
 .login-container {
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.85); /* Fundo escuro com transparência */
     padding: 30px;
     border-radius: 12px;
-    text-align: center;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
-    width: 350px;
+    width: 100%;
+    max-width: 400px;
 }
 
-/* Logo em texto */
+/* ======= Título MotoTech ======= */
 .login-container h1 {
-    font-size: 30px;
+    font-size: 32px;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-.login-container span {
-    color: #ff4500;
+.login-container h1 span {
+    color: #ff6600; /* Cor laranja */
 }
 
-/* Campos de entrada */
+/* ======= Mensagem de Boas-Vindas ======= */
+.login-container p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+/* ======= Input Group ======= */
 .input-group {
     display: flex;
     align-items: center;
     background: #222;
-    padding: 12px;
-    margin: 10px 0;
     border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .input-group i {
+    color: #ff6600;
     margin-right: 10px;
-    color: #ff4500;
+    font-size: 18px;
 }
 
 .input-group input {
-    background: transparent;
     border: none;
+    background: transparent;
     outline: none;
     color: white;
-    width: 100%;
     font-size: 16px;
+    flex: 1;
 }
 
-/* Botão de login */
+/* ======= Botão de Login ======= */
 .btn-login {
-    background: #ff4500;
+    width: 100%;
+    background: #ff6600;
     color: white;
     border: none;
     padding: 12px;
-    width: 100%;
-    font-size: 18px;
     border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    box-shadow: 0px 5px 10px rgba(255, 102, 0, 0.3);
 }
 
 .btn-login:hover {
-    background: #ff5722;
+    background: #e65c00;
+    box-shadow: 0px 8px 15px rgba(255, 102, 0, 0.5);
 }
 
-/* Link de "Esqueceu a senha" */
-a {
-    color: #ff4500;
-    text-decoration: none;
+/* ======= Links de Recuperação e Cadastro ======= */
+.login-container a {
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-a:hover {
+.login-container a:hover {
     text-decoration: underline;
 }
-/* Animação de fade-in ao carregar */
-.login-container {
-    animation: fadeIn 1s ease-out;
-}
 
-/* Animação para o foco nos campos */
-.input-group input:focus {
-    border-color: #ff4500;
-    box-shadow: 0 0 8px #ff4500;
-    transition: all 0.3s;
-}
-
-/* Efeito de fade-in */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-/* Estilo para o link "Voltar para o login" */
-.back-link {
-    display: inline-block;
-    margin-top: 20px;
-    color: #ff4500; /* Cor do link */
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.back-link:hover {
-    color: #ff5722; /* Cor ao passar o mouse */
-}
-footer {
-    background-color: #111;
-    color: #aaa;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-size: 14px;
-}
+/* ======= Atalho para Tela Inicial ======= */
 .home-link {
     display: inline-block;
-    background-color: #ff6600; /* Laranja */
-    color: #fff;
+    background-color: #ff6600;
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -144,5 +118,38 @@ footer {
 }
 
 .home-link:hover {
-    background-color: #e65c00; /* Laranja mais escuro */
+    background-color: #e65c00;
+}
+
+/* ======= Rodapé ======= */
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+    background: #111;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+}
+
+/* ======= Responsividade para Telas Menores ======= */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .input-group input {
+        font-size: 14px;
+    }
+
+    .btn-login {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
 }
