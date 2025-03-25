@@ -1,60 +1,35 @@
-<a href="index.html" class="home-link">
-    <i class="fas fa-home"></i> Início
-</a>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamento - MotoTech</title>
-
-    <!-- Google Fonts e Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <!-- Arquivo CSS -->
     <link rel="stylesheet" href="agendamento.css">
 </head>
 <body>
-<!-- Botão de Agendamento -->
-<button class="btn-agendar" onclick="abrirConfirmacao()">Agendar Serviço</button>
+    <!-- Atalho para a Tela Inicial -->
+    <a href="index.html" class="home-link">
+        <i class="fas fa-home"></i> Início
+    </a>
 
-<!-- Modal de Confirmação -->
-<div id="modalConfirmacao" class="modal">
-    <div class="modal-content">
-        <h2>Confirme seu Agendamento</h2>
-        <p><strong>Serviço:</strong> <span id="confirmaServico"></span></p>
-        <p><strong>Data:</strong> <span id="confirmaData"></span></p>
-        <p><strong>Horário:</strong> <span id="confirmaHorario"></span></p>
-        
-        <div class="modal-buttons">
-            <button class="btn-confirmar" onclick="confirmarAgendamento()">Confirmar</button>
-            <button class="btn-cancelar" onclick="fecharModal()">Cancelar</button>
-        </div>
-    </div>
-</div>
-
-    <!-- Contêiner de Agendamento -->
     <div class="agendamento-container">
         <h1>Agendamento de <span>Serviços</span></h1>
         <p>Escolha o serviço ideal para sua motocicleta e agende agora mesmo!</p>
 
-        <!-- Formulário de Agendamento (Alterado para GET) -->
-        <form action="processa-agendamento.php" method="GET">
-            <!-- Nome do Cliente -->
+        <!-- Formulário de Agendamento -->
+        <form action="agendamento.php" method="POST">
             <div class="input-group">
                 <i class="fas fa-user"></i>
                 <input type="text" name="nome" placeholder="Seu Nome" required>
             </div>
 
-            <!-- E-mail do Cliente -->
             <div class="input-group">
                 <i class="fas fa-envelope"></i>
                 <input type="email" name="email" placeholder="Seu E-mail" required>
             </div>
 
-            <!-- Seleção de Serviço -->
             <div class="input-group">
                 <i class="fas fa-cogs"></i>
                 <select name="servico" required>
@@ -67,23 +42,17 @@
                 </select>
             </div>
 
-            <!-- Data do Agendamento -->
             <div class="input-group">
                 <i class="fas fa-calendar-alt"></i>
                 <input type="date" name="data" required>
             </div>
 
-            <!-- Botão de Envio -->
             <button type="submit" class="btn-agendamento">Agendar Serviço</button>
         </form>
     </div>
 
-    <!-- Rodapé -->
     <footer>
         <p>&copy; 2025 Kamila Rosa. Todos os direitos reservados.</p>
     </footer>
-
-    <!-- Script de Validação JavaScript (Opcional) -->
-    <script src="agendamento.js"></script>
 </body>
 </html>
