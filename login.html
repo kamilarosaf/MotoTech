@@ -24,15 +24,16 @@
         <h1>MOTO <span>TECH</span></h1>
         <p>Bem-vindo! Faça login para continuar.</p>
 
-        <form action="processa-login.php" method="POST">
+        <!-- Formulário de Login -->
+        <form id="loginForm">
             <div class="input-group">
                 <i class="fas fa-user"></i>
-                <input type="text" name="usuario" placeholder="Usuário" required>
+                <input type="text" id="usuario" placeholder="Usuário" required>
             </div>
 
             <div class="input-group">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="senha" placeholder="Senha" required>
+                <input type="password" id="senha" placeholder="Senha" required>
             </div>
 
             <button type="submit" class="btn-login">Entrar</button>
@@ -47,5 +48,7 @@
         <p>&copy; 2025 Kamila Rosa. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="login.js"></script>
 </body>
 </html>
+
