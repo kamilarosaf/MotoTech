@@ -1,4 +1,4 @@
-/* ===== Estilos gerais ===== */
+/* ===== Fundo com imagem de fundo transparente ===== */
 body {
     margin: 0;
     padding: 0;
@@ -11,7 +11,21 @@ body {
     flex-direction: column;
     height: 100vh;
     position: relative;
+    background: url('fundo.jpg') center/cover no-repeat fixed; /* Caminho da imagem */
 }
+
+/* Adicionando um overlay escuro para melhorar a legibilidade */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Escurece o fundo */
+    z-index: -1;
+}
+
 
 /* ===== Fundo com imagem transparente ===== */
 .background-overlay {
