@@ -3,52 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MotoTech - Início</title>
+    <title>Página Inicial - MotoTech</title>
 
-   <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <!-- Google Fonts e Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
-
-    <!-- Arquivo CSS atualizado -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!-- Camada de fundo -->
-    <div class="background-overlay"></div>
 
-    <div class="container">
-        <!-- Logo em texto -->
-        <div class="logo-text">
-            <h1>MOTO</h1>
-            <h2>TECH</h2>
-        </div>
+    <script>
+        // Verifica se o usuário está logado
+        if (!localStorage.getItem('usuarioLogado')) {
+            // Se não estiver logado, redireciona para a página de login
+            window.location.href = 'login.html';
+        }
+    </script>
 
-        <h3>O cuidado que sua moto merece!</h3>
+    <!-- Conteúdo da página inicial -->
+    <div class="home-container">
+        <h1>Bem-vindo à MotoTech!</h1>
+        <p>Você está logado.</p>
 
-        <!-- Seção de opções como "cards" -->
-        <div class="cards">
-            <a href="login.html" class="card">
-                <i class="fas fa-user"></i>
-                <h4>Login</h4>
-            </a>
-            <a href="agendamento.html" class="card">
-                <i class="fas fa-calendar-alt"></i>
-                <h4>Agendamento</h4>
-            </a>
-            <a href="servicos.html" class="card">
-                <i class="fas fa-tools"></i>
-                <h4>Serviços</h4>
-            </a>
-            <a href="marketplace.html" class="card">
-                <i class="fas fa-shopping-cart"></i>
-                <h4>Marketplace</h4>
-            </a>
-        </div>
+        <a href="logout.html" class="btn-logout">Sair</a>
     </div>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2025 Kamila Rosa. Todos os direitos reservados.</p>
-    </footer>
 </body>
 </html>
