@@ -16,32 +16,32 @@
 
     <!-- Contêiner de Agendamento -->
     <div class="agendamento-container">
-        <h1>Agendamento de Serviços</h1>
-        <p>Escolha o serviço que você deseja agendar para sua motocicleta.</p>
+        <h1>Agendamento de <span>Serviços</span></h1>
+        <p>Escolha o serviço ideal para sua motocicleta e agende agora mesmo!</p>
 
         <!-- Formulário de Agendamento -->
         <form action="processa-agendamento.php" method="POST">
             <!-- Nome do Cliente -->
             <div class="input-group">
                 <i class="fas fa-user"></i>
-                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="text" name="nome" placeholder="Seu Nome" required>
             </div>
 
             <!-- E-mail do Cliente -->
             <div class="input-group">
                 <i class="fas fa-envelope"></i>
-                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <input type="email" name="email" placeholder="Seu E-mail" required>
             </div>
 
             <!-- Seleção de Serviço -->
             <div class="input-group">
                 <i class="fas fa-cogs"></i>
                 <select name="servico" required>
-                    <option value="">Selecione o serviço</option>
+                    <option value="">Selecione o Serviço</option>
                     <option value="Troca de Óleo">Troca de Óleo</option>
                     <option value="Revisão Completa">Revisão Completa</option>
                     <option value="Troca de Pneus">Troca de Pneus</option>
-                    <option value="Suspensão">Ajuste de Suspensão</option>
+                    <option value="Ajuste de Suspensão">Ajuste de Suspensão</option>
                     <option value="Diagnóstico Elétrico">Diagnóstico Elétrico</option>
                 </select>
             </div>
