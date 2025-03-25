@@ -117,3 +117,13 @@ a:hover {
 .back-link:hover {
     color: #ff5722; /* Cor ao passar o mouse */
 }
+footer {
+    background-color: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
