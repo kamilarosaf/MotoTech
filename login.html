@@ -1,60 +1,31 @@
-<a href="index.html" class="home-link">
-    <i class="fas fa-home"></i> Início
-</a>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - MotoTech</title>
-
-    <!-- Google Fonts e Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <!-- Arquivo CSS -->
-    <link rel="stylesheet" href="login.css">
-</head>
 <body>
+
+    <!-- Atalho para a Tela Inicial -->
+    <a href="index.html" class="home-link">
+        <i class="fas fa-home"></i> Início
+    </a>
 
     <!-- Contêiner de Login -->
     <div class="login-container">
         <h1>MOTO <span>TECH</span></h1>
         <p>Bem-vindo! Faça login para continuar.</p>
 
-        <!-- Formulário de Login -->
-        <form action="processa-login.php" method="POST" onsubmit="validarLogin(event)">
-            <!-- Campo de Usuário -->
+        <form action="processa-login.php" method="POST">
             <div class="input-group">
                 <i class="fas fa-user"></i>
-                <input type="text" id="usuario" name="usuario" placeholder="Usuário" required>
+                <input type="text" name="usuario" placeholder="Usuário" required>
             </div>
 
-            <!-- Campo de Senha -->
             <div class="input-group">
                 <i class="fas fa-lock"></i>
-                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                <input type="password" name="senha" placeholder="Senha" required>
             </div>
 
-            <!-- Botão de Envio -->
             <button type="submit" class="btn-login">Entrar</button>
         </form>
 
-        <!-- Link para recuperação de senha -->
         <a href="recuperar-senha.html">Esqueceu a senha?</a>
-
-        <!-- Link para criar uma nova conta -->
         <p>Não tem uma conta? <a href="cadastro.html">Crie sua conta</a></p>
-
     </div>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2025 Kamila Rosa. Todos os direitos reservados.</p>
-    </footer>
-
-    <!-- Script de Validação JavaScript -->
-    <script src="login.js"></script>
-
 </body>
-</html>
