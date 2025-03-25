@@ -4,42 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - MotoTech</title>
+
+    <!-- Link para Google Fonts e Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Link para o arquivo CSS -->
     <link rel="stylesheet" href="login.css">
+
+    <script src="login.js" defer></script> <!-- Importando o script JavaScript -->
 </head>
 <body>
-    <!-- Atalho para a página inicial -->
-    <a href="index.html" class="home-link">Início</a>
 
-    <!-- Contêiner de login -->
+    <!-- Atalho para a Tela Inicial -->
+    <a href="index.html" class="home-link">
+        <i class="fas fa-home"></i> Início
+    </a>
+
+    <!-- Contêiner de Login -->
     <div class="login-container">
-        <h1>Login</h1>
-        <form id="loginForm">
-            <!-- Campo de Usuário -->
+        <h1>MOTO <span>TECH</span></h1>
+        <p>Bem-vindo! Faça login para continuar.</p>
+
+        <form id="login-form">
             <div class="input-group">
-                <label for="username">Usuário</label>
-                <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+                <i class="fas fa-user"></i>
+                <input type="text" id="usuario" placeholder="Usuário" required>
             </div>
-            <!-- Campo de Senha -->
+
             <div class="input-group">
-                <label for="password">Senha</label>
-                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                <i class="fas fa-lock"></i>
+                <input type="password" id="senha" placeholder="Senha" required>
             </div>
-            <!-- Botão de Login -->
+
             <button type="submit" class="btn-login">Entrar</button>
         </form>
 
-        <!-- Links extras -->
-        <div class="login-links">
-            <a href="esqueceu-senha.html" class="link">Esqueceu a senha?</a>
-            <a href="criar-conta.html" class="link">Criar Conta</a>
-        </div>
+        <a href="recuperar-senha.html">Esqueceu a senha?</a>
+        <p>Não tem uma conta? <a href="cadastro.html">Crie sua conta</a></p>
     </div>
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 MotoTech. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Kamila Rosa. Todos os direitos reservados.</p>
     </footer>
+
 </body>
-<script src="login.js"></script>
 </html>
