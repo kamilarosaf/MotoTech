@@ -3,48 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início - MotoTech</title>
+    <title>MotoTech - Início</title>
 
-    <!-- Google Fonts e Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome para os ícones -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
-    <!-- Link para o arquivo CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Arquivo CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Camada de fundo -->
+    <div class="background-overlay"></div>
 
-    <!-- Atalho para a Tela Inicial -->
-    <a href="index.html" class="home-link">
-        <i class="fas fa-home"></i> Início
-    </a>
+    <div class="container">
+        <!-- Logo em texto -->
+        <div class="logo-text">
+            <h1>MOTO</h1>
+            <h2>TECH</h2>
+        </div>
 
-    <!-- Barra de navegação -->
-    <nav>
-        <ul>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="agendamentos.html">Agendamentos</a></li>
-            <li><a href="servicos.html">Serviços</a></li>
-            <li><a href="marketplace.html">Marketplace</a></li>
-        </ul>
-    </nav>
+        <h3>O cuidado que sua moto merece!</h3>
 
-    <!-- Conteúdo da página inicial -->
-    <header>
-        <h1>Bem-vindo à MotoTech!</h1>
-        <p>Seu site de serviços automotivos</p>
-    </header>
-
-    <!-- Seção de destaque -->
-    <section>
-        <h2>Sobre nós</h2>
-        <p>A MotoTech oferece uma gama completa de serviços para a manutenção de motos, com uma equipe especializada e pronta para atender suas necessidades!</p>
-    </section>
+        <!-- Seção de opções como "cards" -->
+        <div class="cards">
+            <a href="login.html" class="card">
+                <i class="fas fa-user"></i>
+                <h4>Login</h4>
+            </a>
+            <a href="agendamento.html" class="card">
+                <i class="fas fa-calendar-alt"></i>
+                <h4>Agendamento</h4>
+            </a>
+            <a href="servicos.html" class="card">
+                <i class="fas fa-tools"></i>
+                <h4>Serviços</h4>
+            </a>
+            <a href="marketplace.html" class="card">
+                <i class="fas fa-shopping-cart"></i>
+                <h4>Marketplace</h4>
+            </a>
+        </div>
+    </div>
 
     <!-- Rodapé -->
     <footer>
         <p>&copy; 2025 Kamila Rosa. Todos os direitos reservados.</p>
     </footer>
-
 </body>
 </html>
