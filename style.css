@@ -67,7 +67,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background: url('assets/moto-background.jpg') no-repeat center center/cover; /* Ajuste o caminho do arquivo */
+    background: red; /* Testa se o background está sendo aplicado */
     display: flex;
     align-items: center;
     justify-content: center;
