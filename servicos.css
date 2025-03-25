@@ -1,0 +1,130 @@
+/* Estilos gerais */
+body {
+    font-family: 'Montserrat', sans-serif; /* Fonte padrão */
+    margin: 0;
+    padding: 0;
+    background-color: #111; /* Fundo sólido preto */
+    color: #fff; /* Texto branco */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Atalho para a Tela Inicial */
+.home-link {
+    display: inline-block;
+    background-color: #ff9800; /* Cor laranja */
+    color: #111; /* Texto preto para contraste */
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.home-link:hover {
+    background-color: #e68900; /* Laranja mais escuro no hover */
+}
+
+/* Contêiner de Serviços */
+.servicos-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px;
+    background-color: #222; /* Fundo escuro */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3); /* Sombra laranja */
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    font-size: 28px;
+    color: #ff9800; /* Título laranja */
+    margin-bottom: 20px;
+}
+
+h1 span {
+    color: #fff; /* Texto em branco */
+}
+
+p {
+    font-size: 16px;
+    color: #ddd; /* Texto cinza claro */
+    margin-bottom: 30px;
+}
+
+/* Lista de Serviços em Grid */
+.servicos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+/* Cada Serviço */
+.servico-item {
+    background-color: #333; /* Fundo escuro para os itens */
+    color: #fff; /* Texto branco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3); /* Sombra laranja */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servico-item:hover {
+    transform: scale(1.05); /* Zoom suave no hover */
+    box-shadow: 0px 8px 20px rgba(255, 165, 0, 0.5); /* Sombra mais intensa */
+}
+
+.servico-item h2 {
+    font-size: 24px;
+    color: #ff9800; /* Títulos em laranja */
+    margin-bottom: 15px;
+}
+
+.servico-item p {
+    color: #ddd; /* Texto cinza claro */
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Botão */
+.btn-agendar {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #ff9800; /* Botão laranja */
+    color: #111; /* Texto preto para contraste */
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-agendar:hover {
+    background-color: #e68900; /* Laranja mais escuro no hover */
+}
+
+/* Rodapé */
+footer {
+    width: 100%;
+    background-color: #000; /* Preto sólido */
+    color: #aaa; /* Cinza claro */
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    margin-top: 50px;
+    font-size: 14px;
+}
