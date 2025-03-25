@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar Senha - MotoTech</title>
+
+    <!-- Arquivo de Estilo CSS -->
     <link rel="stylesheet" href="login.css">
+
+    <!-- Font Awesome para o ícone de envelope -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -12,16 +17,20 @@
         <h1>Recuperar Senha</h1>
         <p>Informe seu e-mail para receber as instruções de recuperação.</p>
 
+        <!-- Formulário de Recuperação de Senha -->
         <form action="enviar-recuperacao.php" method="POST">
             <div class="input-group">
+                <!-- Ícone de Envelope -->
                 <i class="fas fa-envelope"></i>
                 <input type="email" name="email" placeholder="Seu e-mail" required>
             </div>
 
+            <!-- Botão de Envio -->
             <button type="submit" class="btn-login">Enviar</button>
         </form>
 
-        <a href="login.html">Voltar para o login</a>
+        <!-- Link para voltar ao login -->
+        <a href="login.html" class="back-link">Voltar para o login</a>
     </div>
 
 </body>
