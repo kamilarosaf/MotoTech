@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - MotoTech</title>
 
-    <!-- Google Fonts e Font Awesome -->
+    <!-- Link para Google Fonts e Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
     <!-- Link para o arquivo CSS -->
     <link rel="stylesheet" href="login.css">
+
+    <script src="login.js" defer></script> <!-- Importando o script JavaScript -->
 </head>
 <body>
 
@@ -24,16 +26,15 @@
         <h1>MOTO <span>TECH</span></h1>
         <p>Bem-vindo! Faça login para continuar.</p>
 
-        <!-- Formulário de Login -->
-        <form id="loginForm" action="processa-login.php" method="POST">
+        <form id="login-form">
             <div class="input-group">
                 <i class="fas fa-user"></i>
-                <input type="text" id="usuario" name="usuario" placeholder="Usuário" required>
+                <input type="text" id="usuario" placeholder="Usuário" required>
             </div>
 
             <div class="input-group">
                 <i class="fas fa-lock"></i>
-                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                <input type="password" id="senha" placeholder="Senha" required>
             </div>
 
             <button type="submit" class="btn-login">Entrar</button>
