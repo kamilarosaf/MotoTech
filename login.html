@@ -14,54 +14,35 @@
 </head>
 <body>
 
+    <!-- Contêiner de Login -->
     <div class="login-container">
         <h1>MOTO <span>TECH</span></h1>
         <p>Bem-vindo! Faça login para continuar.</p>
 
-        <form action="dashboard.html" method="POST">
+        <!-- Formulário de Login -->
+        <form action="processa-login.php" method="POST" onsubmit="validarLogin(event)">
+            <!-- Campo de Usuário -->
             <div class="input-group">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Usuário" required>
+                <input type="text" id="usuario" name="usuario" placeholder="Usuário" required>
             </div>
 
+            <!-- Campo de Senha -->
             <div class="input-group">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Senha" required>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
             </div>
 
+            <!-- Botão de Envio -->
             <button type="submit" class="btn-login">Entrar</button>
         </form>
 
-        <a href="#">Esqueceu a senha?</a>
+        <!-- Link para recuperação de senha -->
+        <a href="recuperar-senha.html">Esqueceu a senha?</a>
     </div>
+
+    <!-- Script de Validação JavaScript -->
+    <script src="login.js"></script>
 
 </body>
 </html>
-<form action="processa-login.php" method="POST">
-    <div class="input-group">
-        <i class="fas fa-user"></i>
-        <input type="text" name="usuario" placeholder="Usuário" required>
-    </div>
-
-    <div class="input-group">
-        <i class="fas fa-lock"></i>
-        <input type="password" name="senha" placeholder="Senha" required>
-    </div>
-
-    <button type="submit" class="btn-login">Entrar</button>
-</form>
-<script src="login.js"></script>
-<form onsubmit="validarLogin(event)">
-    <div class="input-group">
-        <i class="fas fa-user"></i>
-        <input type="text" id="usuario" placeholder="Usuário" required>
-    </div>
-
-    <div class="input-group">
-        <i class="fas fa-lock"></i>
-        <input type="password" id="senha" placeholder="Senha" required>
-    </div>
-
-    <button type="submit" class="btn-login">Entrar</button>
-</form>
-
