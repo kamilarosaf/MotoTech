@@ -25,15 +25,15 @@
         <p>Bem-vindo! Faça login para continuar.</p>
 
         <!-- Formulário de Login -->
-        <form id="loginForm" onsubmit="validarLogin(event)">
+        <form id="loginForm" action="processa-login.php" method="POST">
             <div class="input-group">
                 <i class="fas fa-user"></i>
-                <input type="text" id="usuario" placeholder="Usuário" required>
+                <input type="text" id="usuario" name="usuario" placeholder="Usuário" required>
             </div>
 
             <div class="input-group">
                 <i class="fas fa-lock"></i>
-                <input type="password" id="senha" placeholder="Senha" required>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
             </div>
 
             <button type="submit" class="btn-login">Entrar</button>
@@ -48,7 +48,5 @@
         <p>&copy; 2025 Kamila Rosa. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Link para o arquivo JS -->
-    <script src="login.js"></script>
 </body>
 </html>
