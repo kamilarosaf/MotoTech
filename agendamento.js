@@ -26,3 +26,18 @@ function confirmarAgendamento() {
     alert("Seu serviço foi agendado com sucesso!");
     fecharModal();
 }
+function redirecionarConfirmacao(event) {
+    event.preventDefault(); // Impede o envio do formulário
+
+    let servico = document.getElementById("servico").value;
+    let data = document.getElementById("data").value;
+    let horario = document.getElementById("horario").value;
+
+    if (!servico || !data || !horario) {
+        alert("Por favor, preencha todos os campos antes de agendar!");
+        return;
+    }
+
+    // Redireciona para a página de confirmação com os dados na URL
+    window.location.href = `confirmacao.html?servico=${encodeURIComponent(servico)}&data=${encodeURIComponent(data)}&horario=${encodeURIComponent(horario)}`;
+}
