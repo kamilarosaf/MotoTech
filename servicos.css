@@ -49,9 +49,14 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Ajustando o layout do corpo para que a rolagem funcione */
+body {
+    padding-top: 60px; /* Espaço para a barra de navegação fixa */
+    overflow-x: hidden; /* Impede rolagem horizontal */
+}
+
 /* Contêiner de Serviços */
 .servicos-container {
-    margin-top: 80px; /* Espaçamento devido ao menu fixo */
     width: 100%;
     max-width: 1000px;
     padding: 30px;
@@ -60,6 +65,8 @@ nav ul li a:hover {
     box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
     text-align: center;
     margin-bottom: 50px;
+    margin-top: 20px;
+    overflow: hidden;
 }
 
 /* Título */
