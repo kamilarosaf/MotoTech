@@ -1,23 +1,24 @@
 <?php
-// Dados fictícios de usuário (em um banco de dados seria diferente)
-$usuarios = [
-    'usuario1' => 'senha1',  // Nome de usuário => Senha
-    'usuario2' => 'senha2'
-];
-
-// Verificando os dados do formulário
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Coleta os dados do formulário
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
 
-    // Valida se o usuário e senha estão corretos
-    if (isset($usuarios[$usuario]) && $usuarios[$usuario] == $senha) {
-        // Login bem-sucedido, redireciona para o painel
-        header("Location: dashboard.html");
-        exit;
+    // Aqui você pode substituir essa verificação por uma consulta a um banco de dados real
+    // Exemplo de usuários fictícios:
+    $usuarios_validos = [
+        'usuario1' => 'senha123',
+        'usuario2' => 'senha456'
+    ];
+
+    // Verifica se o usuário existe e se a senha está correta
+    if (isset($usuarios_validos[$usuario]) && $usuarios_validos[$usuario] == $senha) {
+        // Login bem-sucedido, redireciona para a página inicial
+        header("Location: index.html");
+        exit();
     } else {
-        // Senha ou usuário incorretos
-        echo "Usuário ou senha incorretos!";
+        // Se a validação falhar
+        echo "Usuário ou senha incorretos.";
     }
 }
 ?>
