@@ -83,3 +83,24 @@ a {
 a:hover {
     text-decoration: underline;
 }
+/* Animação de fade-in ao carregar */
+.login-container {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Animação para o foco nos campos */
+.input-group input:focus {
+    border-color: #ff4500;
+    box-shadow: 0 0 8px #ff4500;
+    transition: all 0.3s;
+}
+
+/* Efeito de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
