@@ -1,11 +1,11 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Coleta os dados do formulário
+    // Processa o login
+
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
 
-    // Aqui você pode substituir essa verificação por uma consulta ao banco de dados
-    // Exemplo de usuários fictícios:
+    // Simulação de usuários válidos
     $usuarios_validos = [
         'usuario1' => 'senha123',
         'usuario2' => 'senha456'
@@ -14,11 +14,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verifica se o usuário existe e se a senha está correta
     if (isset($usuarios_validos[$usuario]) && $usuarios_validos[$usuario] == $senha) {
         // Login bem-sucedido, redireciona para a página inicial
-        header("Location: index.html"); // Redireciona para a página inicial
+        header("Location: index.html");
         exit();
     } else {
-        // Se a validação falhar
         echo "Usuário ou senha incorretos.";
     }
+} else {
+    // Em caso de outro tipo de requisição, exibe uma mensagem de erro
+    echo "Método não permitido.";
 }
 ?>
