@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Agendamento - MotoTech</title>
+    <link rel="stylesheet" href="agendamento.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Confirme seu Agendamento</h1>
+        <p><strong>Serviço:</strong> <span id="confirmaServico"></span></p>
+        <p><strong>Data:</strong> <span id="confirmaData"></span></p>
+        <p><strong>Horário:</strong> <span id="confirmaHorario"></span></p>
+
+        <div class="buttons">
+            <button class="btn-confirmar" onclick="confirmarAgendamento()">Confirmar</button>
+            <button class="btn-cancelar" onclick="voltarAgendamento()">Editar</button>
+        </div>
+    </div>
+
+    <!-- Importa o JavaScript -->
+    <script src="confirmacao.js"></script>
+</body>
+</html>
