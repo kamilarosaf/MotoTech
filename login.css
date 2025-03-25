@@ -1,112 +1,128 @@
-/* Estilos gerais */
+/* Cor de fundo e fonte geral */
 body {
+    background-color: #1c1c1c; /* Cor escura de fundo */
+    color: #fff; /* Cor do texto */
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #111; /* Fundo preto */
-    color: #fff; /* Texto branco */
+    height: 100vh; /* Garante que o corpo ocupe toda a altura */
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: center; /* Centraliza o conteúdo */
 }
 
 /* Atalho para a tela inicial */
 .home-link {
-    display: inline-block;
-    background-color: #ff9800; /* Cor laranja */
-    color: #111; /* Texto preto para contraste */
-    padding: 12px 20px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: #ff6600;
+    color: white;
     text-decoration: none;
-    transition: 0.3s;
-    margin-bottom: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .home-link:hover {
-    background-color: #e68900; /* Laranja mais escuro */
+    background-color: #e65c00;
+    transform: scale(1.05);
 }
 
-/* Contêiner do login */
+.home-link i {
+    margin-right: 8px;
+}
+
+/* Estilo para o contêiner de login */
 .login-container {
-    background-color: #222; /* Fundo escuro */
-    padding: 30px;
+    background-color: #333; /* Fundo da área de login */
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3); /* Sombra sutil */
-    text-align: center;
+    padding: 30px;
     width: 100%;
-    max-width: 400px;
+    max-width: 400px; /* Limita a largura */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* Grupos de entrada */
+/* Estilo para os títulos */
+h1 {
+    font-size: 36px;
+    color: #ff6600; /* Cor laranja */
+    margin-bottom: 10px;
+}
+
+h1 span {
+    color: #fff; /* Texto branco para 'TECH' */
+}
+
+/* Estilo para os campos de entrada */
 .input-group {
     margin-bottom: 20px;
-    text-align: left;
-}
-
-.input-group label {
-    font-size: 14px;
-    color: #fff;
+    position: relative;
 }
 
 .input-group input {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: none;
+    padding: 12px;
+    padding-left: 35px;
+    font-size: 16px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #333; /* Fundo escuro */
-    color: #fff; /* Texto branco */
+    background-color: #444;
+    color: white;
+    box-sizing: border-box; /* Garante que o padding não afete o tamanho */
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #ff6600;
 }
 
 /* Botão de login */
 .btn-login {
     width: 100%;
     padding: 12px;
-    background-color: #ff9800; /* Laranja */
-    color: #111;
-    font-size: 16px;
-    font-weight: bold;
+    background-color: #ff6600;
+    color: white;
+    font-size: 18px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background-color 0.3s;
 }
 
 .btn-login:hover {
-    background-color: #e68900; /* Laranja mais escuro */
+    background-color: #e65c00;
 }
 
-/* Links adicionais */
-.login-links {
-    margin-top: 15px;
-}
-
-.login-links .link {
-    display: inline-block;
-    color: #ff9800; /* Laranja */
-    font-size: 14px;
+/* Estilo dos links */
+a {
+    color: #ff6600;
     text-decoration: none;
-    margin: 5px;
-    transition: 0.3s;
+    font-size: 14px;
 }
 
-.login-links .link:hover {
-    color: #e68900; /* Laranja mais escuro */
+a:hover {
+    color: #e65c00;
 }
 
-/* Rodapé */
+/* Rodapé fixo */
 footer {
-    width: 100%;
-    background-color: #000;
-    color: #aaa;
+    background-color: #111;
+    color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 10px 0;
     position: fixed;
     bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
     font-size: 14px;
 }
