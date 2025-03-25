@@ -90,3 +90,12 @@ body {
     transform: scale(0.95);
     box-shadow: 0 0 5px rgba(255, 87, 34, 0.8);
 }
+footer {
+    font-size: 14px;
+    color: #ccc;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-top: 1px solid #555;
+}
