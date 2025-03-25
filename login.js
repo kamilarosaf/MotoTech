@@ -1,4 +1,3 @@
-// Função de validação do formulário de login
 function validarLogin(event) {
     event.preventDefault(); // Previne o envio do formulário
 
@@ -6,17 +5,12 @@ function validarLogin(event) {
     var usuario = document.getElementById('usuario').value;
     var senha = document.getElementById('senha').value;
 
-    // Dados de usuário e senha (exemplo)
-    var usuariosValidos = {
-        "usuario1": "senha1",
-        "usuario2": "senha2"
-    };
-
-    // Verificando se o usuário e a senha estão corretos
-    if (usuariosValidos[usuario] && usuariosValidos[usuario] === senha) {
-        alert("Login bem-sucedido!");
-        window.location.href = "dashboard.html";  // Redirecionar para a página
-    } else {
-        alert("Usuário ou senha incorretos.");
+    // Verificando se os campos não estão vazios
+    if (usuario === "" || senha === "") {
+        alert("Por favor, preencha todos os campos.");
+        return;
     }
+
+    // Caso os campos estejam preenchidos, o formulário será enviado
+    event.target.submit(); // Envia o formulário
 }
