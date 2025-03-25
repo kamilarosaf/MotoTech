@@ -220,3 +220,22 @@ footer {
 .btn-cancelar:hover {
     background: #777;
 }
+.home-link {
+    display: inline-block;
+    background-color: #ff6600; /* Laranja */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.home-link i {
+    margin-right: 8px;
+}
+
+.home-link:hover {
+    background-color: #e65c00; /* Laranja mais escuro */
+}
