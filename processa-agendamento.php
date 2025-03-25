@@ -1,20 +1,24 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Coleta os dados do formulário
-    $nome = $_GET['nome'];
-    $email = $_GET['email'];
-    $servico = $_GET['servico'];
-    $data = $_GET['data'];
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $servico = $_POST['servico'];
+    $data = $_POST['data'];
 
-    // Exibe os dados para depuração (temporariamente)
-    echo "<h2>Dados do Agendamento:</h2>";
-    echo "Nome: " . htmlspecialchars($nome) . "<br>";
-    echo "Email: " . htmlspecialchars($email) . "<br>";
-    echo "Serviço: " . htmlspecialchars($servico) . "<br>";
-    echo "Data: " . htmlspecialchars($data) . "<br>";
+    // Aqui, podemos gravar esses dados em um banco de dados ou arquivo
+    // Para fins de teste, vamos armazenar os dados em uma variável de sessão
+    session_start();
+    $_SESSION['agendamento'] = [
+        'nome' => $nome,
+        'email' => $email,
+        'servico' => $servico,
+        'data' => $data
+    ];
 
-    // A partir daqui você pode redirecionar para outra página ou processar os dados.
-    // Exemplo de redirecionamento para uma página de sucesso:
-    // header("Location: sucesso.html");
+    // Redireciona para a página de "Meus Agendamentos"
+    header("Location: meus-agendamentos.php");
+    exit();
 }
 ?>
+
