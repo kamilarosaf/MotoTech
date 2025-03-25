@@ -1,11 +1,24 @@
-/* Adicionando cor e estilo ao atalho para tela inicial */
+/* Cor de fundo e fonte geral */
+body {
+    background-color: #1c1c1c; /* Cor escura de fundo */
+    color: #fff; /* Cor do texto */
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Para garantir que o corpo ocupe toda a altura */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza o conteúdo vertical e horizontalmente */
+}
+
+/* Atalho para a tela inicial */
 .home-link {
-    position: fixed;
-    top: 10px;
-    left: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
     padding: 10px 15px;
-    background-color: #ff6600; /* Cor laranja */
-    color: white; /* Texto branco */
+    background-color: #ff6600;
+    color: white;
     text-decoration: none;
     font-size: 18px;
     border-radius: 5px;
@@ -14,49 +27,39 @@
 }
 
 .home-link:hover {
-    background-color: #e65c00; /* Laranja mais escuro ao passar o mouse */
-    transform: scale(1.05); /* Efeito de aumentar levemente */
+    background-color: #e65c00;
+    transform: scale(1.05);
 }
 
 .home-link i {
     margin-right: 8px;
 }
 
-/* Para garantir que o fundo e o conteúdo do login estejam no estilo correto */
-body {
-    background-color: #1c1c1c; /* Cor de fundo escura, como preto */
-    color: #fff; /* Texto branco */
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Estilo do contêiner de login */
+/* Estilo para o contêiner de login */
 .login-container {
-    background-color: #333; /* Fundo escuro para a área de login */
+    background-color: #333; /* Cor de fundo da área de login */
     border-radius: 10px;
-    padding: 20px;
-    margin-top: 50px; /* Espaço superior para que o conteúdo não fique colado no topo */
+    padding: 30px;
     width: 100%;
-    max-width: 400px;
-    margin: auto;
+    max-width: 400px; /* Limita a largura */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o texto */
 }
 
-/* Estilo dos títulos e textos */
+/* Estilo para os títulos */
 h1 {
     font-size: 36px;
     color: #ff6600; /* Cor laranja */
-    text-align: center;
+    margin-bottom: 10px;
 }
 
 h1 span {
-    color: #fff; /* Manter o texto "TECH" branco */
+    color: #fff; /* Texto branco para 'TECH' */
 }
 
-/* Estilo para as entradas de texto */
+/* Estilo para os campos de entrada */
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     position: relative;
 }
 
@@ -67,8 +70,9 @@ h1 span {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #444; /* Cor de fundo dos campos de entrada */
-    color: white; /* Texto branco */
+    background-color: #444;
+    color: white;
+    box-sizing: border-box; /* Para garantir que o padding não afete o tamanho */
 }
 
 .input-group i {
@@ -76,14 +80,14 @@ h1 span {
     top: 50%;
     left: 10px;
     transform: translateY(-50%);
-    color: #ff6600; /* Ícones laranja */
+    color: #ff6600;
 }
 
 /* Botão de login */
 .btn-login {
     width: 100%;
     padding: 12px;
-    background-color: #ff6600; /* Cor laranja */
+    background-color: #ff6600;
     color: white;
     font-size: 18px;
     border: none;
@@ -93,18 +97,28 @@ h1 span {
 }
 
 .btn-login:hover {
-    background-color: #e65c00; /* Laranja mais escuro no hover */
+    background-color: #e65c00;
 }
 
-/* Links */
+/* Estilo dos links */
 a {
-    color: #ff6600; /* Links laranja */
+    color: #ff6600;
     text-decoration: none;
     font-size: 14px;
 }
 
 a:hover {
-    color: #e65c00; /* Laranja mais escuro ao passar o mouse */
+    color: #e65c00;
+}
+
+/* Estilo para os links de criação de conta e recuperação de senha */
+p {
+    margin-top: 15px;
+}
+
+p a {
+    font-size: 14px;
+    color: #ff6600;
 }
 
 /* Rodapé fixo */
