@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     height: 100vh;
     position: relative;
-    background: url('assets/moto-background.jpg') center/cover no-repeat fixed; /* Ajuste o caminho da imagem */
+    background: url('images/moto-background.jpg') center/cover no-repeat fixed; /* Ajuste o caminho da imagem */
 }
 
 /* Camada de fundo transparente para melhor legibilidade */
