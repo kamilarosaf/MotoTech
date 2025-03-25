@@ -1,4 +1,5 @@
 <?php
+// Iniciar a sessão
 session_start();
 ?>
 
@@ -22,7 +23,7 @@ session_start();
     <div class="agendamento-container">
         <h1>Meus Agendamentos</h1>
         
-        <?php if(isset($_SESSION['agendamento'])): ?>
+        <?php if (isset($_SESSION['agendamento'])): ?>
             <div class="agendamento-info">
                 <p><strong>Nome:</strong> <?php echo $_SESSION['agendamento']['nome']; ?></p>
                 <p><strong>E-mail:</strong> <?php echo $_SESSION['agendamento']['email']; ?></p>
