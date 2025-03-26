@@ -3,36 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo ao MotoTech</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Certifique-se de que o CSS está configurado corretamente -->
+    <title>MOTO TECH - Início</title>
+    <link rel="stylesheet" href="marketplace.css"> <!-- Certifique-se de usar o CSS certo -->
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <h1>Bem-vindo ao MotoTech</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="about.html">Sobre</a></li>
-                <li><a href="projects.html">Projetos</a></li>
-                <li><a href="meus-agendamentos.html">Meus Agendamentos</a></li> <!-- Novo atalho -->
-                <li><a href="contact.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Camada de fundo transparente -->
+    <div class="background-overlay"></div>
 
-    <!-- Conteúdo principal -->
-    <main>
-        <section class="hero">
-            <h2>Seu sistema completo para gestão de serviços automotivos</h2>
-            <p>Explore nossas ferramentas e soluções inovadoras.</p>
-            <a href="projects.html" class="button">Ver Projetos</a>
-        </section>
-    </main>
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Logo do Moto Tech -->
+        <div class="logo-text">
+            <h1>MOTO TECH</h1>
+            <h2>Bem-vindo</h2>
+        </div>
+
+        <!-- Cards com atalhos -->
+        <div class="cards">
+            <a href="about.html" class="card">
+                <i class="fas fa-info-circle"></i> <!-- Ícone de Sobre -->
+                <h4>Sobre</h4>
+            </a>
+            <a href="projects.html" class="card">
+                <i class="fas fa-laptop-code"></i> <!-- Ícone de Projetos -->
+                <h4>Projetos</h4>
+            </a>
+            <a href="meus-agendamentos.html" class="card"> <!-- Novo Atalho -->
+                <i class="fas fa-calendar-check"></i> <!-- Ícone de Meus Agendamentos -->
+                <h4>Meus Agendamentos</h4>
+            </a>
+            <a href="contact.html" class="card">
+                <i class="fas fa-envelope"></i> <!-- Ícone de Contato -->
+                <h4>Contato</h4>
+            </a>
+        </div>
+    </div>
 
     <!-- Rodapé -->
     <footer>
         <p>&copy; 2025 MotoTech - Todos os direitos reservados</p>
     </footer>
+
+    <!-- Inclua o link do Font Awesome para ícones -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
