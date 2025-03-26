@@ -126,6 +126,11 @@
         productList.appendChild(productDiv);
     });
 });
+ function redirectToDetails(name, image, price) {
+        console.log("Redirecionando para os detalhes do produto:", name); // Debug
+        sessionStorage.setItem("selectedProduct", JSON.stringify({ name, image, price }));
+        window.location.href = "product-details.html";
+    }
 
     </script>
 </body>
@@ -147,7 +152,3 @@
 <div id="cart">
     Carrinho: <span id="cart-count">0</span> itens
 </div>
-function redirectToDetails(name, image, price) {
-    sessionStorage.setItem("selectedProduct", JSON.stringify({ name, image, price }));
-    window.location.href = "product-details.html";
-}
