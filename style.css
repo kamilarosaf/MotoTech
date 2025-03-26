@@ -1,10 +1,20 @@
+/* Definição da Fonte */
+@font-face {
+    font-family: 'MumfordBlackOblique';
+    src: url('fonts/MumfordBlackOblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: oblique;
+}
+
+/* Estilo Geral */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'MumfordBlackOblique', Arial, sans-serif;
     color: white;
     text-align: center;
 }
 
+/* Container Principal */
 .container {
     position: relative;
     width: 100%;
@@ -12,6 +22,7 @@ body {
     overflow: hidden;
 }
 
+/* Imagem de Fundo */
 .background img {
     width: 100%;
     height: 100%;
@@ -22,6 +33,7 @@ body {
     z-index: -1;
 }
 
+/* Conteúdo Central */
 .content {
     position: relative;
     top: 50%;
@@ -32,13 +44,16 @@ h1 {
     font-size: 4em;
     color: orange;
     margin: 0;
+    font-family: 'MumfordBlackOblique', Arial, sans-serif;
 }
 
 p {
     font-size: 1.5em;
     margin: 10px 0;
+    font-family: 'MumfordBlackOblique', Arial, sans-serif;
 }
 
+/* Botões */
 .buttons {
     display: flex;
     justify-content: center;
@@ -53,18 +68,22 @@ p {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
     border-radius: 10px;
+    color: white;
+    font-size: 1.2em;
+    font-family: 'MumfordBlackOblique', Arial, sans-serif;
 }
 
-.button img {
-    width: 40px;
-    height: 40px;
+.button i {
+    font-size: 2em;
+    margin-bottom: 5px;
 }
 
 .button span {
     margin-top: 10px;
-    font-size: 1.2em;
+    font-family: 'MumfordBlackOblique', Arial, sans-serif;
 }
 
+/* Rodapé */
 footer {
     position: absolute;
     bottom: 10px;
@@ -72,4 +91,5 @@ footer {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 0;
+    font-family: 'MumfordBlackOblique', Arial, sans-serif;
 }
