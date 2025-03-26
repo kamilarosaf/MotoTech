@@ -6,12 +6,21 @@
     font-style: oblique;
 }
 
+/* Fontes alternativas para motocicletas */
+@font-face {
+    font-family: 'Bangers';
+    src: url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Estilo Geral */
 body {
     margin: 0;
     font-family: 'MumfordBlackOblique', Arial, sans-serif;
     color: white;
     text-align: center;
+    background-color: #121212; /* Cor de fundo escura para destaque */
 }
 
 /* Container Principal */
@@ -38,19 +47,23 @@ body {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 1; /* Garantir que o conteúdo fique acima da imagem de fundo */
 }
 
 h1 {
     font-size: 4em;
     color: orange;
     margin: 0;
-    font-family: 'MumfordBlackOblique', Arial, sans-serif;
+    font-family: 'Bangers', 'MumfordBlackOblique', Arial, sans-serif;
+    letter-spacing: 2px; /* Mais espaçamento para dar sensação de velocidade */
+    text-transform: uppercase;
 }
 
 p {
     font-size: 1.5em;
     margin: 10px 0;
     font-family: 'MumfordBlackOblique', Arial, sans-serif;
+    color: #f2f2f2; /* Um tom claro de cinza para o texto */
 }
 
 /* Botões */
@@ -66,15 +79,21 @@ p {
     flex-direction: column;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
+    padding: 12px 20px;
     border-radius: 10px;
     color: white;
     font-size: 1.2em;
     font-family: 'MumfordBlackOblique', Arial, sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #FF5733; /* Cor de fundo do botão ao passar o mouse */
+    transform: scale(1.05); /* Efeito de leve aumento */
 }
 
 .button i {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 5px;
 }
 
@@ -92,4 +111,5 @@ footer {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 0;
     font-family: 'MumfordBlackOblique', Arial, sans-serif;
+    color: #fff;
 }
