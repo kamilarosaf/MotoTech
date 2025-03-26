@@ -14,7 +14,6 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            align-items: center;
             min-height: 100vh;
         }
         header {
@@ -23,6 +22,11 @@
             width: 100%;
             text-align: center;
         }
+        main {
+            flex: 1;
+            width: 100%;
+            padding: 20px;
+        }
         .product-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -30,7 +34,6 @@
             padding: 20px;
             max-width: 1200px;
             margin: auto;
-            flex: 1;
         }
         .product {
             background-color: #222;
@@ -74,7 +77,7 @@
             color: #aaa;
             text-align: center;
             padding: 10px;
-            position: relative;
+            position: fixed;
             bottom: 0;
             font-size: 14px;
         }
@@ -92,36 +95,34 @@
     <footer>
         &copy; 2025 Kamila Rosa. Todos os direitos reservados.
     </footer>
-   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const products = [
-            { name: "Capacete X-Force", price: "R$ 299,90", image: "https://via.placeholder.com/200" },
-            { name: "Luva ProTork", price: "R$ 99,90", image: "https://via.placeholder.com/200" },
-            { name: "Pneu Michelin", price: "R$ 499,90", image: "https://via.placeholder.com/200" },
-            { name: "Jaqueta de Couro", price: "R$ 399,90", image: "https://via.placeholder.com/200" },
-            { name: "Bota Impermeável", price: "R$ 259,90", image: "https://via.placeholder.com/200" },
-            { name: "Óculos de Proteção", price: "R$ 129,90", image: "https://via.placeholder.com/200" },
-            { name: "Luvas de Motocross", price: "R$ 149,90", image: "https://via.placeholder.com/200" },
-            { name: "Filtro de Ar", price: "R$ 89,90", image: "https://via.placeholder.com/200" },
-            { name: "Sistema de Escape", price: "R$ 799,90", image: "https://via.placeholder.com/200" }
-        ];
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const products = [
+                { name: "Capacete X-Force", price: "R$ 299,90", image: "https://via.placeholder.com/200" },
+                { name: "Luva ProTork", price: "R$ 99,90", image: "https://via.placeholder.com/200" },
+                { name: "Pneu Michelin", price: "R$ 499,90", image: "https://via.placeholder.com/200" },
+                { name: "Jaqueta de Couro", price: "R$ 399,90", image: "https://via.placeholder.com/200" },
+                { name: "Bota Impermeável", price: "R$ 259,90", image: "https://via.placeholder.com/200" },
+                { name: "Óculos de Proteção", price: "R$ 129,90", image: "https://via.placeholder.com/200" },
+                { name: "Luvas de Motocross", price: "R$ 149,90", image: "https://via.placeholder.com/200" },
+                { name: "Filtro de Ar", price: "R$ 89,90", image: "https://via.placeholder.com/200" },
+                { name: "Sistema de Escape", price: "R$ 799,90", image: "https://via.placeholder.com/200" }
+            ];
 
-        const productList = document.getElementById("product-list");
+            const productList = document.getElementById("product-list");
 
-        products.forEach(product => {
-            const productDiv = document.createElement("div");
-            productDiv.classList.add("product");
-            productDiv.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
-                <h2>${product.name}</h2>
-                <p>${product.price}</p>
-                <button class="buy-btn">Comprar</button>
-            `;
-            productList.appendChild(productDiv);
+            products.forEach(product => {
+                const productDiv = document.createElement("div");
+                productDiv.classList.add("product");
+                productDiv.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <h2>${product.name}</h2>
+                    <p>${product.price}</p>
+                    <button class="buy-btn">Comprar</button>
+                `;
+                productList.appendChild(productDiv);
+            });
         });
-    });
-</script>
-
+    </script>
 </body>
 </html>
-
