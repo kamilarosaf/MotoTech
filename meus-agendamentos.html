@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Agendamentos</title>
-    <link rel="stylesheet" href="meus-agendamentos.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Cabeçalho com botão de atalho -->
@@ -26,6 +26,7 @@
                         <th>Data</th>
                         <th>Serviço</th>
                         <th>Status</th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,11 +34,19 @@
                         <td>05/04/2025</td>
                         <td>Troca de óleo</td>
                         <td>Agendado</td>
+                        <td>
+                            <button class="action-button reschedule">Reagendar</button>
+                            <button class="action-button cancel">Cancelar</button>
+                        </td>
                     </tr>
                     <tr>
                         <td>10/04/2025</td>
                         <td>Revisão completa</td>
                         <td>Confirmado</td>
+                        <td>
+                            <button class="action-button reschedule">Reagendar</button>
+                            <button class="action-button cancel">Cancelar</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -76,3 +85,4 @@
     </footer>
 </body>
 </html>
+
