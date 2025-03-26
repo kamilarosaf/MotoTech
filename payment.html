@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .payment-box {
+            max-width: 400px;
+            margin: auto;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        .buy-btn {
+            padding: 10px;
+            background-color: #ff9800;
+            border: none;
+            border-radius: 5px;
+            color: #111;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-box">
+        <h1>Pagamento</h1>
+        <p id="product-name"></p>
+        <p id="product-price"></p>
+        
+        <h3>Escolha a forma de pagamento</h3>
+        <select id="payment-method">
+            <option value="cartao">Cartão de Crédito</option>
+            <option value="boleto">Boleto Bancário</option>
+            <option value="pix">PIX</option>
+        </select>
+
+        <input type="text" id="card-number" placeholder="Número do Cartão" style="display:none;">
+        <button class="buy-btn" onclick="finalizePurchase()">Finalizar Compra</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const product = JSON.parse(sessionStorage.getItem("confirmedProduct"));
+
+            if (product) {
+                document.getElementById("product-name").innerText = `Produto: ${product.name}`;
+                document.getElementById("product-price").innerText = `Preço: ${product.price}`;
+            }
+
+            document.getElementById("payment-method").addEventListener("change", function() {
+                if (this.value === "cartao") {
+                    document.getElementById("card-number").style.display = "block";
+                } else {
+                    document.getElementById("card-number").style.display = "none";
+                }
+            });
+        });
+
+        function finalizePurchase() {
+            alert("Compra realizada com sucesso! Obrigado por comprar na MotoTech.");
+            sessionStorage.clear();
+            window.location.href = "marketplace.html"; // Redireciona para a página inicial
+        }
+    </script>
+</body>
+</html>
