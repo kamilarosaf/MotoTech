@@ -102,3 +102,13 @@
     </script>
 </body>
 </html>
+footer {
+    width: 100%;
+    background-color: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    font-size: 14px;
+}
