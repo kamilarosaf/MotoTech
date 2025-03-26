@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Agendamentos</title>
     <link rel="stylesheet" href="meus-agendamentos.css">
+    <script>
+        // Função para confirmar o cancelamento
+        function confirmCancel() {
+            const userConfirmation = confirm("Você tem certeza de que deseja cancelar este agendamento?");
+            if (userConfirmation) {
+                alert("O agendamento foi cancelado com sucesso.");
+                // Lógica adicional pode ser implementada aqui (e.g., enviar para backend)
+            } else {
+                alert("O agendamento não foi cancelado.");
+            }
+        }
+    </script>
 </head>
 <body>
     <!-- Cabeçalho com botão de atalho -->
@@ -35,8 +47,8 @@
                         <td>Troca de óleo</td>
                         <td>Agendado</td>
                         <td>
-                            <button class="action-button reschedule">Reagendar</button>
-                            <button class="action-button cancel">Cancelar</button>
+                            <a href="agendamento.html" class="action-button reschedule">Reagendar</a>
+                            <button class="action-button cancel" onclick="confirmCancel()">Cancelar</button>
                         </td>
                     </tr>
                     <tr>
@@ -44,8 +56,8 @@
                         <td>Revisão completa</td>
                         <td>Confirmado</td>
                         <td>
-                            <button class="action-button reschedule">Reagendar</button>
-                            <button class="action-button cancel">Cancelar</button>
+                            <a href="agendamento.html" class="action-button reschedule">Reagendar</a>
+                            <button class="action-button cancel" onclick="confirmCancel()">Cancelar</button>
                         </td>
                     </tr>
                 </tbody>
@@ -81,8 +93,7 @@
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 MotoTech - Todos os direitos reservados.</p>
+        <p>&copy; 2025 Kamila Rosa - Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
-
