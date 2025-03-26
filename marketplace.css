@@ -112,3 +112,18 @@ footer {
     bottom: 0;
     font-size: 14px;
 }
+<style>
+    .home-link {
+        color: #ff9800;
+        text-decoration: none;
+        font-size: 1.2em;
+        margin-left: 20px;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    .home-link:hover {
+        color: #e68900;
+    }
+</style>
+
