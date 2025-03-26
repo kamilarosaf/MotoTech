@@ -1,8 +1,14 @@
 /* Ajustando a Imagem de Fundo */
+.background {
+    position: relative;
+    height: 100vh; /* Define a altura da tela para a imagem de fundo */
+    overflow: hidden; /* Garante que nada saia da área visível */
+}
+
 .background img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Mantém a imagem centralizada e proporcional */
+    height: 100%; /* Faz com que a imagem cubra toda a altura da tela */
+    object-fit: cover; /* Mantém a imagem proporcional e centralizada */
     position: absolute;
     top: 0;
     left: 0;
@@ -16,6 +22,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    color: white; /* Garantir que o texto fique visível */
 }
 
 /* Estilo Geral do Título e Texto */
