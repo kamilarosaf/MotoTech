@@ -93,3 +93,30 @@ footer {
     border-top: 1px solid #555;
     font-size: 14px;
 }
+/* Botões de ação */
+.action-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.action-button.reschedule {
+    background-color: #ffcc00; /* Amarelo */
+    color: #000;
+}
+
+.action-button.reschedule:hover {
+    background-color: #e6b800; /* Amarelo mais escuro */
+}
+
+.action-button.cancel {
+    background-color: #ff4444; /* Vermelho */
+    color: #fff;
+}
+
+.action-button.cancel:hover {
+    background-color: #cc0000; /* Vermelho mais escuro */
+}
