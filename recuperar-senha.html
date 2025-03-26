@@ -3,35 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuperar Senha - MotoTech</title>
-
-    <!-- Arquivo de Estilo CSS -->
-    <link rel="stylesheet" href="login.css">
-
-    <!-- Font Awesome para o ícone de envelope -->
+    <title>Redefinir Senha - MotoTech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="recuperar-senha.css">
+    <script src="recuperar-senha.js" defer></script>
 </head>
 <body>
 
-    <div class="login-container">
-        <h1>Recuperar Senha</h1>
-        <p>Informe seu e-mail para receber as instruções de recuperação.</p>
+    <!-- Atalho para a Tela Inicial -->
+    <a href="index.html" class="home-link">
+        <i class="fas fa-home"></i> Início
+    </a>
 
-        <!-- Formulário de Recuperação de Senha -->
-        <form action="enviar-recuperacao.php" method="POST">
+    <div class="recuperar-container">
+        <h1>Redefinir <span>Senha</span></h1>
+        <p>Digite seu e-mail para redefinir a senha. Você receberá um link de recuperação.</p>
+
+        <!-- Formulário de Recuperação -->
+        <form id="recuperarForm">
             <div class="input-group">
-                <!-- Ícone de Envelope -->
                 <i class="fas fa-envelope"></i>
-                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
             </div>
 
-            <!-- Botão de Envio -->
-            <button type="submit" class="btn-login">Enviar</button>
+            <button type="submit" class="btn-enviar">Enviar</button>
         </form>
 
-        <!-- Link para voltar ao login -->
-        <a href="login.html" class="back-link">Voltar para o login</a>
+        <!-- Mensagem de confirmação -->
+        <div id="mensagemConfirmacao" class="confirmacao" style="display: none;">
+            <p>E-mail enviado com sucesso! Verifique sua caixa de entrada.</p>
+            <a href="index.html" class="btn-voltar">Voltar para a Página Inicial</a>
+        </div>
     </div>
+
+    <footer>
+        <p>&copy; 2025 Kamila Rosa. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>
