@@ -106,7 +106,7 @@
         { name: "Óculos de Proteção", price: "R$ 129,90", image: "images/oculos-de-protecao.jpg" },
         { name: "Luvas de Motocross", price: "R$ 149,90", image: "images/luvas-motocross.jpg" },
         { name: "Filtro de Ar", price: "R$ 89,90", image: "images/filtro-de-ar.jpg" },
-        { name: "Sistema de Escape", price: "R$ 799,90", image: "images/sistema-de-escape.jpg" }
+        { name: "Sistema de Escape", price: "R$ 139,90", image: "images/sistema-de-escape.jpg" }
     ];
 
     const productList = document.getElementById("product-list");
@@ -127,3 +127,21 @@
     </script>
 </body>
 </html>
+<style>
+    #cart {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+<div id="cart">
+    Carrinho: <span id="cart-count">0</span> itens
+</div>
+
