@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .product-details {
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+        }
+        .product-details img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-details">
+        <h1 id="product-name">Nome do Produto</h1>
+        <img id="product-image" src="" alt="Produto">
+        <p id="product-description">Descrição do produto...</p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const productName = sessionStorage.getItem("selectedProduct");
+            document.getElementById("product-name").innerText = productName;
+            document.getElementById("product-image").src = `images/${productName.toLowerCase().replace(/ /g, '-')}.jpg`;
+            document.getElementById("product-description").innerText = `Aqui estão as especificações do produto: ${productName}.`;
+        });
+    </script>
+</body>
+</html>
