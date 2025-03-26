@@ -1,109 +1,106 @@
-/* Cabeçalho */
-header {
-    background: rgba(20, 20, 20, 0.9);
-    color: #f1f1f1;
-    padding: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* ===== Estilos gerais ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: url('images/moto-background.jpg') center/cover no-repeat fixed;
+    color: white;
     text-align: center;
 }
 
+/* ===== Cabeçalho ===== */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    color: white;
+}
+
 header h1 {
-    color: #00aaff;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    font-size: 36px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
 }
 
-nav ul li a {
+nav .nav-button {
     text-decoration: none;
-    font-weight: bold;
-    color: #00aaff;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: #00aaff;
-    color: #101010;
-    box-shadow: 0px 0px 15px #00aaff;
-}
-
-nav ul li a.active {
-    background-color: #007bff;
+    font-size: 18px;
     color: white;
-}
-
-/* Tabelas */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-table th, table td {
-    padding: 12px 20px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-table th {
-    background-color: #00aaff;
-    color: #fff;
-    font-weight: bold;
-}
-
-table tbody tr:hover {
-    background: rgba(0, 0, 0, 0.05);
-}
-
-/* Botões */
-button {
     padding: 10px 15px;
-    font-size: 1rem;
-    border: none;
     border-radius: 5px;
-    cursor: pointer;
+    background-color: rgba(255, 87, 34, 0.8);
     transition: background-color 0.3s ease;
 }
 
-button.cancel {
-    background-color: #ff4d4d;
-    color: #fff;
+nav .nav-button:hover {
+    background-color: rgba(255, 87, 34, 1);
 }
 
-button.cancel:hover {
-    background-color: #e60000;
+nav .nav-button.active {
+    background-color: rgba(0, 200, 150, 0.8);
 }
 
-button.reschedule {
-    background-color: #00aaff;
-    color: #fff;
+/* ===== Conteúdo Principal ===== */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-button.reschedule:hover {
-    background-color: #008ac1;
+section {
+    margin-top: 30px;
 }
 
-/* Rodapé */
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff5722;
+    text-transform: uppercase;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    margin-top: 10px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #555;
+}
+
+table th {
+    background-color: rgba(255, 87, 34, 0.8);
+    color: white;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+table tr:hover {
+    background-color: rgba(255, 87, 34, 0.4);
+}
+
+/* ===== Rodapé ===== */
 footer {
     text-align: center;
     padding: 15px;
-    background-color: rgba(20, 20, 20, 0.9);
-    color: #f1f1f1;
-    border-top: 3px solid #00aaff;
-    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
+    background-color: #111;
+    color: #aaa;
+    border-top: 1px solid #555;
+    font-size: 14px;
 }
