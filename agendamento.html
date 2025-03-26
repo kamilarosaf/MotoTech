@@ -1,31 +1,63 @@
-<!-- Formulário de Agendamento -->
-<form action="confirmacao.html" method="GET">
-    <div class="input-group">
-        <i class="fas fa-user"></i>
-        <input type="text" name="nome" placeholder="Seu Nome" required>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - MotoTech</title>
+
+    <!-- Link para Google Fonts e Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Link para o arquivo CSS do Agendamento -->
+    <link rel="stylesheet" href="agendamento.css">
+</head>
+<body>
+
+    <!-- Atalho para a Tela Inicial -->
+    <a href="index.html" class="home-link">
+        <i class="fas fa-home"></i> Início
+    </a>
+
+    <div class="agendamento-container">
+        <h1>Agendamento de <span>Serviços</span></h1>
+        <p>Escolha o serviço ideal para sua motocicleta e agende agora mesmo!</p>
+
+        <!-- Formulário de Agendamento -->
+        <form action="confirmacao.html" method="GET">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" name="nome" placeholder="Seu Nome" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Seu E-mail" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-cogs"></i>
+                <select name="servico" id="servico" required>
+                    <option value="">Selecione o Serviço</option>
+                    <option value="Troca de Óleo">Troca de Óleo</option>
+                    <option value="Revisão Completa">Revisão Completa</option>
+                    <option value="Troca de Pneus">Troca de Pneus</option>
+                    <option value="Ajuste de Suspensão">Ajuste de Suspensão</option>
+                    <option value="Diagnóstico Elétrico">Diagnóstico Elétrico</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-calendar-alt"></i>
+                <input type="date" name="data" id="data" required>
+            </div>
+
+            <button type="submit" class="btn-agendamento">Agendar Serviço</button>
+        </form>
     </div>
 
-    <div class="input-group">
-        <i class="fas fa-envelope"></i>
-        <input type="email" name="email" placeholder="Seu E-mail" required>
-    </div>
-
-    <div class="input-group">
-        <i class="fas fa-cogs"></i>
-        <select name="servico" required>
-            <option value="">Selecione o Serviço</option>
-            <option value="Troca de Óleo">Troca de Óleo</option>
-            <option value="Revisão Completa">Revisão Completa</option>
-            <option value="Troca de Pneus">Troca de Pneus</option>
-            <option value="Ajuste de Suspensão">Ajuste de Suspensão</option>
-            <option value="Diagnóstico Elétrico">Diagnóstico Elétrico</option>
-        </select>
-    </div>
-
-    <div class="input-group">
-        <i class="fas fa-calendar-alt"></i>
-        <input type="date" name="data" required>
-    </div>
-
-    <button type="submit" class="btn-agendamento">Agendar Serviço</button>
-</form>
+    <footer>
+        <p>&copy; 2025 Kamila Rosa. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
