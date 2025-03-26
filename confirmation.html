@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Compra</title>
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .confirmation-box {
+            max-width: 400px;
+            margin: auto;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-box">
+        <h1>Compra Confirmada!</h1>
+        <h2 id="confirmed-product-name"></h2>
+        <img id="confirmed-product-image" src="" alt="Produto">
+        <p id="confirmed-product-price"></p>
+        <p>Obrigado por comprar na MotoTech!</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const product = JSON.parse(sessionStorage.getItem("confirmedProduct"));
+
+            if (product) {
+                document.getElementById("confirmed-product-name").innerText = product.name;
+                document.getElementById("confirmed-product-image").src = product.image;
+                document.getElementById("confirmed-product-price").innerText = `Preço: ${product.price}`;
+            }
+        });
+    </script>
+</body>
+</html>
