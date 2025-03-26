@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<header>
-    <h1>MotoTech Marketplace</h1>
-    <a href="marketplace.html" class="home-link">Início</a>
-</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoTech Marketplace</title>
     <link rel="stylesheet" href="../style.css">
     <style>
         body {
@@ -22,6 +22,19 @@
             width: 100%;
             text-align: center;
         }
+        header a.home-link {
+            color: #ff9800;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header a.home-link:hover {
+            color: #e68900;
+        }
+
         main {
             flex: 1;
             width: 100%;
@@ -81,11 +94,24 @@
             bottom: 0;
             font-size: 14px;
         }
+        #cart {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>MotoTech Marketplace</h1>
+        <a href="marketplace.html" class="home-link">Início</a>
     </header>
     <main>
         <section class="product-list" id="product-list">
@@ -95,60 +121,45 @@
     <footer>
         &copy; 2025 Kamila Rosa. Todos os direitos reservados.
     </footer>
+    <div id="cart">
+        Carrinho: <span id="cart-count">0</span> itens
+    </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-    const products = [
-        { name: "Capacete X-Force", price: "R$ 299,90", image: "images/capacete-xforce.jpg" },
-        { name: "Luva ProTork", price: "R$ 99,90", image: "images/luva-protork.jpg" },
-        { name: "Pneu Michelin", price: "R$ 499,90", image: "images/pneu-dianteiro.jpg" },
-        { name: "Jaqueta de Couro", price: "R$ 399,90", image: "images/jaqueta-de-couro.jpg" },
-        { name: "Bota Impermeável", price: "R$ 259,90", image: "images/bota-impermeavel.jpg" },
-        { name: "Óculos de Proteção", price: "R$ 129,90", image: "images/oculos-de-protecao.jpg" },
-        { name: "Luvas de Motocross", price: "R$ 149,90", image: "images/luvas-motocross.jpg" },
-        { name: "Filtro de Ar", price: "R$ 89,90", image: "images/filtro-de-ar.jpg" },
-        { name: "Sistema de Escape", price: "R$ 139,90", image: "images/sistema-de-escape.jpg" }
-    ];
+            const products = [
+                { name: "Capacete X-Force", price: "R$ 299,90", image: "images/capacete-xforce.jpg" },
+                { name: "Luva ProTork", price: "R$ 99,90", image: "images/luva-protork.jpg" },
+                { name: "Pneu Michelin", price: "R$ 499,90", image: "images/pneu-dianteiro.jpg" },
+                { name: "Jaqueta de Couro", price: "R$ 399,90", image: "images/jaqueta-de-couro.jpg" },
+                { name: "Bota Impermeável", price: "R$ 259,90", image: "images/bota-impermeavel.jpg" },
+                { name: "Óculos de Proteção", price: "R$ 129,90", image: "images/oculos-de-protecao.jpg" },
+                { name: "Luvas de Motocross", price: "R$ 149,90", image: "images/luvas-motocross.jpg" },
+                { name: "Filtro de Ar", price: "R$ 89,90", image: "images/filtro-de-ar.jpg" },
+                { name: "Sistema de Escape", price: "R$ 139,90", image: "images/sistema-de-escape.jpg" }
+            ];
 
-    const productList = document.getElementById("product-list");
+            const productList = document.getElementById("product-list");
 
-    products.forEach(product => {
-        const productDiv = document.createElement("div");
-        productDiv.classList.add("product");
-        productDiv.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-            <h2>${product.name}</h2>
-            <p>${product.price}</p>
-           <button class="buy-btn" onclick="redirectToDetails('${product.name}', '${product.image}', '${product.price}')">
-    Comprar
-</button>
+            products.forEach(product => {
+                const productDiv = document.createElement("div");
+                productDiv.classList.add("product");
+                productDiv.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <h2>${product.name}</h2>
+                    <p>${product.price}</p>
+                    <button class="buy-btn" onclick="redirectToDetails('${product.name}', '${product.image}', '${product.price}')">
+                        Comprar
+                    </button>
+                `;
+                productList.appendChild(productDiv);
+            });
+        });
 
-        `;
-        productList.appendChild(productDiv);
-    });
-});
- function redirectToDetails(name, image, price) {
-        console.log("Redirecionando para os detalhes do produto:", name); // Debug
-        sessionStorage.setItem("selectedProduct", JSON.stringify({ name, image, price }));
-        window.location.href = "product-details.html";
-    }
-
+        function redirectToDetails(name, image, price) {
+            console.log("Redirecionando para os detalhes do produto:", name); // Debug
+            sessionStorage.setItem("selectedProduct", JSON.stringify({ name, image, price }));
+            window.location.href = "product-details.html";
+        }
     </script>
 </body>
 </html>
-<style>
-    #cart {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        background-color: #333;
-        color: #fff;
-        padding: 10px 15px;
-        border-radius: 5px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-        text-align: center;
-        font-weight: bold;
-    }
-</style>
-<div id="cart">
-    Carrinho: <span id="cart-count">0</span> itens
-</div>
