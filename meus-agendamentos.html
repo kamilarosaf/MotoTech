@@ -4,43 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Agendamentos - MotoTech</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="marketplace.css"> <!-- Seguindo o padrão do marketplace -->
 </head>
 <body>
+    <!-- Cabeçalho com botão de início -->
     <header>
+        <h1>Meus Agendamentos</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="meus-agendamentos.html">Meus Agendamentos</a></li>
-                <li><a href="marketplace.html">Marketplace</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="index.html" class="nav-button">Início</a></li>
+                <li><a href="about.html" class="nav-button">Sobre</a></li>
+                <li><a href="projects.html" class="nav-button">Projetos</a></li>
+                <li><a href="meus-agendamentos.html" class="nav-button active">Meus Agendamentos</a></li>
+                <li><a href="contact.html" class="nav-button">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="content">
-        <h2>Meus Agendamentos</h2>
-        <div class="agendamentos-list">
-            <div class="agendamento">
-                <h3>Serviço: Troca de Óleo</h3>
-                <p><strong>Data:</strong> 15/04/2025</p>
-                <p><strong>Status:</strong> Em andamento</p>
-                <button>Cancelar Agendamento</button>
-                <button>Alterar Data</button>
-            </div>
+    <!-- Conteúdo principal -->
+    <main>
+        <section class="upcoming">
+            <h2>Agendamentos Futuros</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Serviço</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="upcoming-schedule">
+                    <!-- Dados adicionados dinamicamente via JavaScript -->
+                </tbody>
+            </table>
+        </section>
 
-            <div class="agendamento">
-                <h3>Serviço: Troca de Pneu</h3>
-                <p><strong>Data:</strong> 17/04/2025</p>
-                <p><strong>Status:</strong> Agendado</p>
-                <button>Cancelar Agendamento</button>
-                <button>Alterar Data</button>
-            </div>
-        </div>
-    </section>
+        <section class="completed">
+            <h2>Agendamentos Concluídos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Serviço</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="completed-schedule">
+                    <!-- Dados adicionados dinamicamente via JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
 
+    <!-- Rodapé com direitos reservados -->
     <footer>
         <p>&copy; 2025 MotoTech - Todos os direitos reservados</p>
     </footer>
+
+    <script src="meus-agendamentos.js"></script>
 </body>
 </html>
