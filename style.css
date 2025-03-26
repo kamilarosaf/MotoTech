@@ -1,81 +1,144 @@
-/* Ajustando a Imagem de Fundo com Transparência */
-.background {
-    position: absolute;
+/* ===== Estilos gerais ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    background: url('images/moto-background.jpg') center/cover no-repeat fixed; /* Ajuste o caminho da imagem */
+}
+
+/* Camada de fundo transparente para melhor legibilidade */
+.background-overlay {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('images/moto-background.jpg') no-repeat center center;
-    background-size: cover;
-    opacity: 0.5; /* Define a leve transparência */
-    z-index: -1; /* Coloca a imagem no plano de fundo */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
 
-/* Centralizando o Conteúdo */
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
+/* ===== Container principal ===== */
+.container {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
 }
 
-/* Estilo do Título */
-h1 {
-    font-size: 4em;
-    color: orange;
+/* ===== Logo em texto ===== */
+.logo-text h1 {
+    font-size: 60px;
     margin: 0;
-    font-family: 'MumfordBlackOblique', Arial, sans-serif;
-    text-shadow: 2px 2px 5px black; /* Contraste para legibilidade */
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #ff4500;
 }
 
-/* Estilo do Texto Subtítulo */
-p {
-    font-size: 1.5em;
-    margin: 10px 0;
-    font-family: 'MumfordBlackOblique', Arial, sans-serif;
-    text-shadow: 2px 2px 5px black; /* Mesma sombra para melhor legibilidade */
+.logo-text h2 {
+    font-size: 120px;
+    margin: -10px 0 20px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    color: #ff5722;
+    text-transform: uppercase;
 }
 
-/* Botões */
-.buttons {
+/* ===== Cards dos links ===== */
+.cards {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
     margin-top: 20px;
 }
 
-.button {
+.card {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
-    padding: 10px;
-    border-radius: 10px;
-    color: white;
-    font-size: 1.2em;
-    font-family: 'MumfordBlackOblique', Arial, sans-serif;
 }
 
-/* Ícones */
-.button i {
-    font-size: 2em;
-    margin-bottom: 5px;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(255, 87, 34, 0.5);
 }
 
-.button span {
-    margin-top: 10px;
-    font-family: 'MumfordBlackOblique', Arial, sans-serif;
+/* Ícones dentro dos cards */
+.card i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #ff5722;
 }
 
-/* Rodapé */
+/* Texto dentro dos cards */
+.card h4 {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* ===== Rodapé ===== */
 footer {
-    position: absolute;
-    bottom: 10px;
+    font-size: 14px;
+    padding: 15px;
+    background-color: #111;
+    color: #aaa;
     width: 100%;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px 0;
-    font-family: 'MumfordBlackOblique', Arial, sans-serif;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #555;
+}
+/* Fonte personalizada para o nome "MOTO TECH" */
+.logo-text {
+    font-family: 'Racing Sans One', cursive;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.logo-text h1 {
+    font-size: 70px;
+    margin: 0;
+    color: #ff4500;
+}
+
+.logo-text h2 {
+    font-size: 120px;
+    margin: -10px 0 20px;
+    color: #ff5722;
+    letter-spacing: 5px;
+}
+
+.home-link {
+    display: inline-block;
+    background-color: #ff6600; /* Laranja */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.home-link i {
+    margin-right: 8px;
+}
+
+.home-link:hover {
+    background-color: #e65c00; /* Laranja mais escuro */
 }
