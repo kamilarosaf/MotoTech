@@ -118,7 +118,10 @@
             <img src="${product.image}" alt="${product.name}">
             <h2>${product.name}</h2>
             <p>${product.price}</p>
-            <button class="buy-btn">Comprar</button>
+           <button class="buy-btn" onclick="redirectToDetails('${product.name}', '${product.image}', '${product.price}')">
+    Comprar
+</button>
+
         `;
         productList.appendChild(productDiv);
     });
@@ -144,4 +147,7 @@
 <div id="cart">
     Carrinho: <span id="cart-count">0</span> itens
 </div>
-
+function redirectToDetails(name, image, price) {
+    sessionStorage.setItem("selectedProduct", JSON.stringify({ name, image, price }));
+    window.location.href = "product-details.html";
+}
