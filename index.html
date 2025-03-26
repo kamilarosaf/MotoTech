@@ -52,3 +52,41 @@
     </footer>
 </body>
 </html>
+document.addEventListener("DOMContentLoaded", function() {
+    const products = [
+        { name: "Capacete X-Force", price: "R$ 299,90", image: "images/capacete-xforce.jpg" },
+        { name: "Luva ProTork", price: "R$ 99,90", image: "images/luva-protork.jpg" },
+        { name: "Pneu Michelin", price: "R$ 499,90", image: "images/pneu-michelin.jpg" },
+        { name: "Jaqueta de Couro", price: "R$ 399,90", image: "images/jaqueta-couro.jpg" },
+        { name: "Bota Impermeável", price: "R$ 259,90", image: "images/bota-impermeavel.jpg" },
+        { name: "Óculos de Proteção", price: "R$ 129,90", image: "images/oculos-protecao.jpg" },
+        { name: "Luvas de Motocross", price: "R$ 149,90", image: "images/luvas-motocross.jpg" },
+        { name: "Filtro de Ar", price: "R$ 89,90", image: "images/filtro-ar.jpg" },
+        { name: "Sistema de Escape", price: "R$ 799,90", image: "images/sistema-escape.jpg" }
+    ];
+
+    let cartCount = 0;
+
+    const productList = document.getElementById("product-list");
+
+    products.forEach(product => {
+        const productDiv = document.createElement("div");
+        productDiv.classList.add("product");
+        productDiv.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h2>${product.name}</h2>
+            <p>${product.price}</p>
+            <button class="buy-btn">Comprar</button>
+        `;
+        productList.appendChild(productDiv);
+
+        // Adicionando evento ao botão "Comprar"
+        const buyButton = productDiv.querySelector(".buy-btn");
+        buyButton.addEventListener("click", function() {
+            cartCount++;
+            document.getElementById("cart-count").innerText = cartCount;
+            sessionStorage.setItem("selectedProduct", product.name);
+            window.location.href = "./product-details.html"; // Certifique-se do caminho correto
+        });
+    });
+});
