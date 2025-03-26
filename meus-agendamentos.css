@@ -3,57 +3,47 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background: url('images/moto-background.jpg') center/cover no-repeat fixed;
+    background-color: #1e1e1e; /* Cor sólida para o fundo */
     color: white;
     text-align: center;
 }
 
 /* ===== Cabeçalho ===== */
 header {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    color: white;
-}
-
-header h1 {
-    font-size: 36px;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    align-items: center;
+    height: 100vh; /* Ocupa toda a altura da tela */
 }
 
-nav .nav-button {
+/* Botão de início fixo */
+.home-link {
+    display: inline-block;
     text-decoration: none;
     font-size: 18px;
     color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    background-color: rgba(255, 87, 34, 0.8);
-    transition: background-color 0.3s ease;
+    background-color: #ff5722; /* Cor laranja */
+    padding: 15px 20px;
+    border-radius: 0 5px 5px 0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-nav .nav-button:hover {
-    background-color: rgba(255, 87, 34, 1);
+.home-link i {
+    margin-right: 8px;
 }
 
-nav .nav-button.active {
-    background-color: rgba(0, 200, 150, 0.8);
+.home-link:hover {
+    background-color: #e65c00; /* Laranja mais escuro */
+    transform: translateX(5px); /* Animação para mover ligeiramente à direita ao passar o mouse */
 }
 
 /* ===== Conteúdo Principal ===== */
 main {
+    margin-left: 60px; /* Ajuste para que o conteúdo não fique sobreposto ao botão fixo */
     padding: 20px;
-    max-width: 1200px;
-    margin: auto;
 }
 
 section {
@@ -70,9 +60,9 @@ section h2 {
 table {
     width: 100%;
     border-collapse: collapse;
+    margin: 20px 0;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    margin-top: 10px;
 }
 
 table th, table td {
@@ -83,7 +73,6 @@ table th, table td {
 
 table th {
     background-color: rgba(255, 87, 34, 0.8);
-    color: white;
     text-transform: uppercase;
 }
 
