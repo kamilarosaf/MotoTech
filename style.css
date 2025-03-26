@@ -52,6 +52,11 @@ p {
     color: white;
     font-size: 1.2em;
     font-family: 'MumfordBlackOblique', Arial, sans-serif;
+    transition: background-color 0.3s ease; /* Suaviza a transição de cor */
+}
+
+.button:hover {
+    background-color: rgba(255, 165, 0, 0.8); /* Cor de destaque ao passar o mouse */
 }
 
 /* Ícones */
@@ -69,4 +74,6 @@ footer {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 0;
     font-family: 'MumfordBlackOblique', Arial, sans-serif;
+    color: white;
+    font-size: 1em;
 }
