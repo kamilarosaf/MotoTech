@@ -1,98 +1,109 @@
-/* Mantendo o padrão de cores, fontes e botões interativos do Marketplace */
-
-/* Estilo base para o corpo da página */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;  /* Cor de fundo mais clara */
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-/* Cabeçalho do site */
+/* Cabeçalho */
 header {
-    background-color: #343a40;  /* Cor escura do cabeçalho */
-    color: white;
-    padding: 20px 0;
+    background: rgba(20, 20, 20, 0.9);
+    color: #f1f1f1;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     text-align: center;
 }
 
 header h1 {
-    font-size: 24px;
-    margin: 0;
+    color: #00aaff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    color: #00aaff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
+    background-color: #00aaff;
+    color: #101010;
+    box-shadow: 0px 0px 15px #00aaff;
+}
+
+nav ul li a.active {
     background-color: #007bff;
     color: white;
 }
 
-/* Estilo para a seção de agendamentos */
-.agendamentos-list {
-    margin-top: 20px;
-    padding: 10px;
-}
-
-.agendamento {
-    background-color: #ffffff;
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.agendamento:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+table th, table td {
+    padding: 12px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-.agendamento h3 {
-    color: #007bff; /* Cor principal dos títulos */
-    margin-bottom: 10px;
+table th {
+    background-color: #00aaff;
+    color: #fff;
+    font-weight: bold;
 }
 
-.agendamento p {
-    font-size: 1.1rem;
-    color: #333;
+table tbody tr:hover {
+    background: rgba(0, 0, 0, 0.05);
 }
 
+/* Botões */
 button {
-    background-color: #007bff;
-    color: white;
+    padding: 10px 15px;
+    font-size: 1rem;
     border: none;
-    padding: 8px 15px;
     border-radius: 5px;
-    margin-right: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+button.cancel {
+    background-color: #ff4d4d;
+    color: #fff;
 }
 
-/* Footer */
+button.cancel:hover {
+    background-color: #e60000;
+}
+
+button.reschedule {
+    background-color: #00aaff;
+    color: #fff;
+}
+
+button.reschedule:hover {
+    background-color: #008ac1;
+}
+
+/* Rodapé */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #343a40;
-    color: white;
+    padding: 15px;
+    background-color: rgba(20, 20, 20, 0.9);
+    color: #f1f1f1;
+    border-top: 3px solid #00aaff;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
 }
