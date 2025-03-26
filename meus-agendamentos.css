@@ -1,0 +1,98 @@
+/* Mantendo o padrão de cores, fontes e botões interativos do Marketplace */
+
+/* Estilo base para o corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;  /* Cor de fundo mais clara */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho do site */
+header {
+    background-color: #343a40;  /* Cor escura do cabeçalho */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Estilo para a seção de agendamentos */
+.agendamentos-list {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.agendamento {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.agendamento:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.agendamento h3 {
+    color: #007bff; /* Cor principal dos títulos */
+    margin-bottom: 10px;
+}
+
+.agendamento p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #343a40;
+    color: white;
+}
