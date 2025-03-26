@@ -13,38 +13,52 @@
             padding: 20px;
         }
         .confirmation-box {
-            max-width: 400px;
+            max-width: 500px;
             margin: auto;
             background-color: #222;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
         }
-        img {
+        .confirmation-box img {
             width: 100%;
-            border-radius: 10px;
+            border-radius: 5px;
+        }
+        .buy-btn {
+            padding: 10px;
+            background-color: #ff9800;
+            border: none;
+            border-radius: 5px;
+            color: #111;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
     <div class="confirmation-box">
         <h1>Compra Confirmada!</h1>
-        <h2 id="confirmed-product-name"></h2>
-        <img id="confirmed-product-image" src="" alt="Produto">
-        <p id="confirmed-product-price"></p>
-        <p>Obrigado por comprar na MotoTech!</p>
+        <h2 id="product-name"></h2>
+        <img id="product-image" src="" alt="Produto">
+        <p id="product-price"></p>
+        <button class="buy-btn" onclick="goToPayment()">Ir para Pagamento</button>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const product = JSON.parse(sessionStorage.getItem("confirmedProduct"));
-
+            
             if (product) {
-                document.getElementById("confirmed-product-name").innerText = product.name;
-                document.getElementById("confirmed-product-image").src = product.image;
-                document.getElementById("confirmed-product-price").innerText = `Preço: ${product.price}`;
+                document.getElementById("product-name").innerText = product.name;
+                document.getElementById("product-image").src = product.image;
+                document.getElementById("product-price").innerText = `Preço: ${product.price}`;
             }
         });
+
+        function goToPayment() {
+            window.location.href = "payment.html";
+        }
     </script>
 </body>
 </html>
