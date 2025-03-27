@@ -3,27 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MotoTech Marketplace</title>
     <link rel="stylesheet" href="../style.css">
     <style>
-       
-        <!-- Header com menu de navegação -->
-    <header class="main-header">
-        <div class="logo">
-            <h1>MotoTech</h1>
-        </div>
-        <nav class="navbar">
-            <ul class="nav-list">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="servicos.html">Agendamento</a></li>
-                <li><a href="agendamento.html">Meus Agendamentos</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-           
-       </ul>
-        </nav>
-    </header>
-
+        /* Estilo geral */
         body {
             background-color: #111;
             color: #fff;
@@ -36,27 +18,30 @@
         }
         header {
             background-color: #333;
-            padding: 15px 0;
-            width: 100%;
-            text-align: center;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        header a.home-link {
+        header h1 {
             color: #ff9800;
+            margin: 0;
+        }
+        .navbar .nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+        .navbar .nav-list li a {
+            color: #fff;
             text-decoration: none;
-            font-size: 1.2em;
-            margin-left: 20px;
-            font-weight: bold;
+            font-size: 1em;
             transition: color 0.3s ease;
         }
-
-        header a.home-link:hover {
+        .navbar .nav-list li a:hover {
             color: #e68900;
-        }
-
-        main {
-            flex: 1;
-            width: 100%;
-            padding: 20px;
         }
         .product-list {
             display: grid;
@@ -127,8 +112,19 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>MotoTech Marketplace</h1>
+    <header class="main-header">
+        <div class="logo">
+            <h1>MotoTech</h1>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="servicos.html">Agendamento</a></li>
+                <li><a href="agendamento.html">Meus Agendamentos</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section class="product-list" id="product-list">
