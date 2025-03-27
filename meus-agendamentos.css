@@ -145,3 +145,61 @@ footer {
     background-color: #e63939; /* Vermelho mais intenso no hover */
     box-shadow: 0px 6px 12px rgba(230, 57, 57, 0.5); /* Efeito de brilho */
 }
+/* ===== Header ===== */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    color: white;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.main-header .logo h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #ff5722;
+    font-family: 'Racing Sans One', cursive;
+}
+
+.navbar .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-list li {
+    margin-left: 20px;
+}
+
+.navbar .nav-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-list li a:hover {
+    color: #ff5722; /* Efeito hover */
+}
+
+/* ===== Ajustes gerais ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1e1e1e;
+    color: white;
+    padding-top: 70px; /* Espaço para a header fixa */
+}
+
+main {
+    padding: 20px;
+}
