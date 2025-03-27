@@ -6,6 +6,8 @@ body {
     background-color: #1e1e1e; /* Cor sólida para o fundo */
     color: white;
     text-align: center;
+    height: 100vh; /* Altura sempre fixa */
+    overflow: hidden; /* Remove a rolagem */
 }
 
 /* ===== Cabeçalho ===== */
