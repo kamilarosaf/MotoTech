@@ -72,3 +72,22 @@ body {
     text-align: center;
     text-decoration: none;
     color: white
+} 
+/* Fonte personalizada para o nome "MOTO TECH" */ 
+.logo-text {
+    font-family: 'Racing Sans One', cursive; 
+    text-transform: uppercase; 
+    text-align: center; 
+}
+/* ===== Rodapé ===== */ 
+footer { 
+    font-size: 14px; 
+    padding: 15px; 
+    background-color: #111; 
+    color: #aaa; 
+    width: 100%; 
+    text-align: center; 
+    position: absolute; 
+    bottom: 0; 
+    border-top: 1px solid #555; 
+}
