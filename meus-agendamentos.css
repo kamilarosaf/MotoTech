@@ -98,19 +98,6 @@ table tr:hover {
     background-color: rgba(255, 87, 34, 0.4);
 }
 
-/* ===== Rodapé ===== */ 
-footer { 
-    font-size: 14px; 
-    padding: 15px; 
-    background-color: #111; 
-    color: #aaa; 
-    width: 100%; 
-    text-align: center; 
-    position: absolute; 
-    bottom: 0; 
-    border-top: 1px solid #555; 
-}
-
 /* Botões de ação */
 .action-button {
     padding: 10px 20px; /* Maior espaçamento para uma aparência moderna */
@@ -202,4 +189,17 @@ body {
 
 main {
     padding: 20px;
+}
+
+/* ===== Rodapé ===== */ 
+footer { 
+    font-size: 14px; 
+    padding: 15px; 
+    background-color: #111; 
+    color: #aaa; 
+    width: 100%; 
+    text-align: center; 
+    position: absolute; 
+    bottom: 0; 
+    border-top: 1px solid #555; 
 }
