@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MotoTech</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Meus Agendamentos</title>
+    <link rel="stylesheet" href="meus-agendamentos.css">
+    <script>
+        // Função para confirmar o cancelamento
+        function confirmCancel() {
+            const userConfirmation = confirm("Você tem certeza de que deseja cancelar este agendamento?");
+            if (userConfirmation) {
+                alert("O agendamento foi cancelado com sucesso.");
+                // Lógica adicional pode ser implementada aqui (e.g., enviar para backend)
+            } else {
+                alert("O agendamento não foi cancelado.");
+            }
+        }
+    </script>
 </head>
 <body>
-    <!-- Header com menu de navegação -->
+        <!-- Header com menu de navegação -->
     <header class="main-header">
         <div class="logo">
             <h1>MotoTech</h1>
@@ -22,21 +34,81 @@
             </ul>
         </nav>
     </header>
+    <!-- Cabeçalho com botão de atalho -->
+    <header>
+        <nav>
+            <a href="index.html" class="home-link">Início</a>
+        </nav>
+        <h1>Meus Agendamentos</h1>
+    </header>
 
     <!-- Conteúdo principal -->
     <main>
-        <section id="agendamentos">
+        <!-- Agendamentos Marcados -->
+        <section class="upcoming">
             <h2>Agendamentos Marcados</h2>
-            <!-- Tabela de Agendamentos -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Serviço</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>05/04/2025</td>
+                        <td>Troca de óleo</td>
+                        <td>Agendado</td>
+                        <td>
+                            <a href="agendamento.html" class="action-button reschedule">Reagendar</a>
+                            <button class="action-button cancel" onclick="confirmCancel()">Cancelar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10/04/2025</td>
+                        <td>Revisão completa</td>
+                        <td>Confirmado</td>
+                        <td>
+                            <a href="agendamento.html" class="action-button reschedule">Reagendar</a>
+                            <button class="action-button cancel" onclick="confirmCancel()">Cancelar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
-        <section id="encerrados">
+
+        <!-- Agendamentos Concluídos -->
+        <section class="completed">
             <h2>Agendamentos Encerrados</h2>
-            <!-- Tabela de Agendamentos Encerrados -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Serviço</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>20/03/2025</td>
+                        <td>Troca de pneu</td>
+                        <td>Concluído</td>
+                    </tr>
+                    <tr>
+                        <td>01/03/2025</td>
+                        <td>Alinhamento</td>
+                        <td>Finalizado</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
 
+    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 MotoTech - Todos os direitos reservados.</p>
+        <p>&copy; 2025 Kamila Rosa - Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
