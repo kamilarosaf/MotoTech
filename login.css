@@ -126,3 +126,51 @@ footer p {
     margin: 0;
     font-size: 14px;
 }
+/* ===== Header ===== */
+.main-header {
+    display: flex;
+    justify-content: space-between; /* Espaça o logo e o menu */
+    align-items: center;
+    background-color: #111;
+    color: white;
+    padding: 10px 20px; /* Espaço interno uniforme */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    box-sizing: border-box; /* Inclui bordas e padding no tamanho total */
+    overflow: hidden; /* Evita que o conteúdo transborde */
+}
+
+.main-header .logo h1 {
+    font-size: 20px; /* Ajusta o tamanho do logo */
+    margin: 0;
+    color: #ff5722;
+    font-family: 'Racing Sans One', cursive;
+    white-space: nowrap; /* Evita quebra de linha no texto do logo */
+}
+
+.navbar .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px; /* Adiciona espaçamento entre os itens */
+    flex-wrap: wrap; /* Permite que os itens do menu se reorganizem se necessário */
+}
+
+.navbar .nav-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px; /* Tamanho de fonte ajustado */
+    padding: 8px 12px; /* Adiciona espaço interno para os links */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap; /* Evita quebra de linha no texto dos links */
+}
+
+.navbar .nav-list li a:hover {
+    color: #ff5722; /* Destaca no hover */
+    background-color: rgba(255, 87, 34, 0.1); /* Fundo levemente destacado */
+}
