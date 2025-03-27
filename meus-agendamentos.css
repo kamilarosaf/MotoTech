@@ -184,7 +184,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #1e1e1e;
     color: white;
-    padding-top: 70px; /* Espaço para a header fixa */
+    padding-top: 60px; /* Espaço para a header fixa */
 }
 
 main {
