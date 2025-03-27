@@ -1,132 +1,42 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MotoTech Marketplace</title>
-    <link rel="stylesheet" href="../styles.css">
-    <style>
-        body {
-            background-color: #111;
-            color: #fff;
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        header {
-            background-color: #333;
-            padding: 15px 0;
-            width: 100%;
-            text-align: center;
-        }
-        .product-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .product {
-            background-color: #222;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
-            padding: 15px;
-            text-align: center;
-        }
-        .product img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-        .product h2 {
-            font-size: 1.2em;
-            color: #ff9800;
-            margin: 10px 0;
-        }
-        .product p {
-            font-size: 1em;
-            color: #ddd;
-        }
-        .buy-btn {
-            background-color: #ff9800;
-            color: #111;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: 0.3s ease;
-            text-transform: uppercase;
-        }
-        .buy-btn:hover {
-            background-color: #e68900;
-            transform: scale(1.05);
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>MotoTech Marketplace</h1>
-    </header>
-    <main>
-        <section class="product-list" id="product-list">
-            <!-- Os produtos serão carregados aqui via JavaScript -->
-        </section>
-    </main>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const products = [
-                { name: "Capacete X-Force", price: "R$ 299,90", image: "https://via.placeholder.com/200" },
-                { name: "Luva ProTork", price: "R$ 99,90", image: "https://via.placeholder.com/200" },
-                { name: "Pneu Michelin", price: "R$ 499,90", image: "https://via.placeholder.com/200" }
-            ];
-            
-            const productList = document.getElementById("product-list");
-            
-            products.forEach(product => {
-                const productDiv = document.createElement("div");
-                productDiv.classList.add("product");
-                productDiv.innerHTML = `
-                    <img src="${product.image}" alt="${product.name}">
-                    <h2>${product.name}</h2>
-                    <p>${product.price}</p>
-                    <button class="buy-btn">Comprar</button>
-                `;
-                productList.appendChild(productDiv);
-            });
-        });
-    </script>
-</body>
-</html>
-footer {
-    width: 100%;
-    background-color: #000;
-    color: #aaa;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    font-size: 14px;
+/* ===== Estilo Geral ===== */
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-<style>
-    .home-link {
-        color: #ff9800;
-        text-decoration: none;
-        font-size: 1.2em;
-        margin-left: 20px;
-        font-weight: bold;
-        transition: color 0.3s ease;
-    }
 
-    .home-link:hover {
-        color: #e68900;
-    }
-</style>
-/* Estilizando os produtos */
+/* ===== Cabeçalho ===== */
+header {
+    background-color: #333;
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    color: #ff9800;
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* ===== Lista de Produtos ===== */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===== Estilizando os Produtos ===== */
 .product {
     background-color: #222;
     border-radius: 10px;
@@ -135,40 +45,41 @@ footer {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Garante espaçamento igual entre os elementos */
-    height: 300px; /* Altura fixa para todos os produtos */
-    width: 200px; /* Largura fixa para consistência */
+    justify-content: space-between; /* Distribui os elementos no card */
+    height: 300px; /* Altura fixa para consistência */
+    width: 200px; /* Largura fixa para proporções iguais */
     margin: auto;
 }
 
-/* Estilizando a imagem */
+/* Estilizando a Imagem dos Produtos */
 .product img {
-    max-height: 120px; /* Altura máxima para as imagens */
+    max-height: 120px;
     width: auto;
-    object-fit: contain; /* Garante que a proporção da imagem seja mantida */
+    object-fit: contain; /* Mantém as proporções da imagem */
     border-radius: 5px;
 }
 
-/* Estilizando o título */
+/* Estilizando o Título */
 .product h2 {
     font-size: 1.2em;
     color: #ff9800;
     margin: 10px 0;
-    flex-grow: 1; /* Faz o título ocupar o espaço disponível, mantendo o alinhamento */
+    flex-grow: 1;
     display: flex;
-    align-items: center; /* Centraliza verticalmente o texto */
-    justify-content: center; /* Centraliza horizontalmente o texto */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    text-align: center;
 }
 
-/* Estilizando o preço */
+/* Estilizando o Preço */
 .product p {
     font-size: 1em;
     color: #ddd;
     margin: 5px 0 15px;
-    flex-shrink: 0; /* Garante que o preço não seja comprimido */
+    flex-shrink: 0;
 }
 
-/* Estilizando o botão Comprar */
+/* Estilizando o Botão Comprar */
 .buy-btn {
     background-color: #ff9800;
     color: #111;
@@ -185,4 +96,31 @@ footer {
 .buy-btn:hover {
     background-color: #e68900;
     transform: scale(1.05); /* Efeito de zoom no hover */
+}
+
+/* ===== Rodapé ===== */
+footer {
+    width: 100%;
+    background-color: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    font-size: 14px;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Link da Home ===== */
+.home-link {
+    color: #ff9800;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.home-link:hover {
+    color: #e68900;
 }
