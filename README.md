@@ -83,6 +83,6 @@ MotoTech/
 
 Feito com 💚 por **Kamila Rosa**
 
-- [LinkedIn](https://www.linkedin.com/in/kamilarosa/)
+- [LinkedIn]((https://www.linkedin.com/in/kamila-rosa-15a818309/))
 - [Portfólio](https://kamilarosaf.github.io/meu-portfolio/)
 
